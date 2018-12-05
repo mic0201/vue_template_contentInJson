@@ -1,0 +1,197 @@
+{
+  "logo_part1": "LIGHT",
+  "logo_part2": "WIRE",
+  "menu": [
+    {
+      "name": "HOME",
+      "isList": true,
+      "item": [
+        {
+          "name": "WORKER",
+          "link": ""
+        },
+        {
+          "name": "INDUSTRY",
+          "link": ""
+        },
+        {
+          "name": "FACTORY",
+          "link": ""
+        },
+        {
+          "name": "CONSTRUCTION",
+          "link": ""
+        },
+        {
+          "name": "TECH",
+          "link": ""
+        },
+        {
+          "name": "INTRO",
+          "link": ""
+        }
+      ]
+    },
+    {
+      "name": "PAGE",
+      "isList": true,
+      "item": [
+        {
+          "name": "WORKER",
+          "isList": true,
+          "item": [
+            {
+              "name": "ABOUT",
+              "link": ""
+            },
+            {
+              "name": "HISTORY",
+              "link": ""
+            },
+            {
+              "name": "CAREER",
+              "link": ""
+            },
+            {
+              "name": "PARTNERS",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "name": "INDUSTRY",
+          "isList": true,
+          "item": [
+            {
+              "name": "TECH",
+              "link": ""
+            },
+            {
+              "name": "INTRO",
+              "link": ""
+            },
+            {
+              "name": "TECH",
+              "link": ""
+            },
+            {
+              "name": "INTRO",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "name": "FACTORY",
+          "isList": true,
+          "item": [
+            {
+              "name": "TECH",
+              "link": ""
+            },
+            {
+              "name": "INTRO",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "name": "CONSTRUCTION",
+          "isList": true,
+          "item": [
+            {
+              "name": "TECH",
+              "link": ""
+            },
+            {
+              "name": "INTRO",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "name": "TECH",
+          "link": ""
+        },
+        {
+          "name": "INTRO",
+          "link": ""
+        }
+      ]
+    },
+    {
+      "name": "PROJECTS",
+      "link": ""
+    },
+    {
+      "name": "BLOG",
+      "link": ""
+    },
+    {
+      "name": "ELEMENTS",
+      "isTab": true,
+      "tabHeader": [
+        "COMPONENT",
+        "HEADERS",
+        "TITLE"
+      ],
+      "tabData": {
+        "COMPONENT": [
+          "ICONS",
+          "COUNTERS",
+          "COUNTDOWNS",
+          "PROGRESS BARS",
+          "CIRCLE PROGRESS BARS",
+          "TIMELINE",
+          "CONTACT FORM",
+          "BUTTONS",
+          "IMAGE BOXES",
+          "ADVANCED IMAGE BOXES",
+          "CONTENT BOXES",
+          "SOCIAL MEDIA",
+          "LISTS",
+          "GOOGLE MAPS",
+          "TYPOGRAPHY",
+          "ADVANCED TABLES",
+          "LIGHTBOX AND POPUPS",
+          "SLIDERS AND CAROUSELS",
+          "SCROLL BOX",
+          "COLLAPSE",
+          "TABS",
+          "ACCORDION",
+          "GRID",
+          "MASONRY",
+          "SECTION IMAGE",
+          "SECTION PARALLAX",
+          "SECTION SLIDER",
+          "SECTION VIDEO",
+          "SECTION ANIMATION",
+          "FOOTER PARALLAX",
+          "FOOTER MINIMAL",
+          "FOOTER BASE"
+        ],
+        "HEADERS": [
+          "MASONRY",
+          "SECTION IMAGE",
+          "SECTION PARALLAX",
+          "SECTION SLIDER",
+          "SECTION VIDEO",
+          "SECTION ANIMATION",
+          "FOOTER PARALLAX",
+          "FOOTER MINIMAL",
+          "FOOTER BASE"
+        ],
+        "TITLE": [
+          "MASONRY",
+          "SECTION IMAGE",
+          "SECTION PARALLAX",
+          "SECTION SLIDER",
+          "SECTION VIDEO",
+          "SECTION ANIMATION",
+          "FOOTER PARALLAX",
+          "FOOTER MINIMAL",
+          "FOOTER BASE"
+        ]
+      }
+    }
+  ]
+}
