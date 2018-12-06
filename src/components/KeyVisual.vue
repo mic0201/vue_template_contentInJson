@@ -68,7 +68,7 @@ export default {
         border-style: solid
         border-width: 50px 0 50px 86.6px
         border-color: transparent transparent transparent #ffffff
-        transform: scale(0.5)
+        transform: scale(0.4)
         &:before
           content: ''
           position: absolute
