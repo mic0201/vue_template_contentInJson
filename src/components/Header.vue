@@ -1,8 +1,10 @@
 <template lang="pug">
   header.flex
+    //- Logo
     .logo.flex
       h3 {{ header.logo_part1 }}
       h3.alt {{ header.logo_part2 }}
+    //- Menu
     .menu.flex
       span.item-container(v-for="(item, index) in header.menu" :key="index" href="")
         a.item.flex(:href="item.link") {{ item.name }}
@@ -21,33 +23,19 @@
               a.tabHeader.flex {{ tabHeader }}
               .tabBody.disappear.flex
                 a.tabData(v-for="(tabData, tabDataIndex) in item.tabData[tabHeader]" :key="tabDataIndex") {{ tabData }}
-
-
-    .extension
+    //- Extension
+    .extension.flex
+      span.icon
+        i.fa.fa-search
+      a.btn.fillout
+        span {{ header.button_text }}
 </template>
 
 <script>
-import { getHeader } from "../service/";
-
 export default {
   name: "Header",
-  props: {},
-  data: function() {
-    return {
-      header: {}
-    };
-  },
-  async created() {
-    await this.getHeader();
-  },
-  methods: {
-    async getHeader() {
-      let header = await getHeader();
-      this.putHeader(header);
-    },
-    putHeader(header) {
-      this.header = header.data;
-    }
+  props: {
+    header: Object
   }
 };
 </script>
@@ -79,15 +67,13 @@ export default {
   header
     width: 100%
     height: 45px
-    max-width: 1200px
     color: white
-    margin: auto
     padding-top: 25px
     &.flex
       align-items: center
 
     .logo
-      font-size: 16px
+      font-size: 0.95rem
       margin-right: 25px
       > h3
         padding: 10px 20px
@@ -101,7 +87,7 @@ export default {
       &.flex
         align-items: center
       height: 100%
-      font-size: 12px
+      font-size: 0.5rem
 
       > .item-container
         height: 100%
@@ -146,7 +132,7 @@ export default {
                 right: 10px
                 background-color: transparent
                 > i
-                  font-size: 12px
+                  font-size: 0.5rem
                   opacity: 0.7
                   background-color: transparent
               &:hover
@@ -208,5 +194,14 @@ export default {
             &:hover
               +whenHoverItem
 
+    .extension
+      margin-left: auto
+      &.flex
+        align-items: center
+      .btn
+        font-size: 0.7rem
+      .icon
+        font-size: 1.7rem
+        margin-right: 1.5rem
 
 </style>

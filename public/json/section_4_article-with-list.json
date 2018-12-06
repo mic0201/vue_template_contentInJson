@@ -1,0 +1,30 @@
+{
+  "title": "GUARANTEED QUALITY",
+  "description": "Our team of experts in the areas of architecture, engineering, management and construction bring you the insight and advice you need for your project.",
+  "list": [
+    {
+      "content": "Monthly checks",
+      "active": false
+    },
+    {
+      "content": "Technological assisted operations",
+      "active": false
+    },
+    {
+      "content": "Renovable products from the scratch",
+      "active": false
+    },
+    {
+      "content": "Human char rlch countries",
+      "active": false
+    },
+    {
+      "content": "Security for employees",
+      "active": false
+    },
+    {
+      "content": "Only the best materials",
+      "active": false
+    }
+  ]
+}

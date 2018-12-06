@@ -1,0 +1,41 @@
+{
+  "card": [
+    {
+      "img": "/img/section_2_introduction/card-img-1.jpg",
+      "title": "EXPERIENCED TEAM",
+      "description": "Our team of experts in the areas of architecture, engineering, management and construction bring you the insight and advice you need for your project."
+    },
+    {
+      "img": "/img/section_2_introduction/card-img-2.jpg",
+      "title": "MODERN EQUIPMENT",
+      "description": "Heavy equipment refers to heavy-duty vehicles, specially designed for executing construction tasks, most frequently ones involving earthwork operations."
+    },
+    {
+      "img": "/img/section_2_introduction/card-img-3.jpg",
+      "title": "SMART METHODS",
+      "description": "The procedures and techniques that are used during the building process. We always focused on using modern methods of construction and repair."
+    }
+  ],
+  "leading": [
+    {
+      "icon": "/img/section_2_introduction/leading-img-1.svg",
+      "title": "Manufacturing",
+      "sub_title": "Speed, Flexibility"
+    },
+    {
+      "icon": "/img/section_2_introduction/leading-img-2.png",
+      "title": "Construction",
+      "sub_title": "Heavy performance"
+    },
+    {
+      "icon": "/img/section_2_introduction/leading-img-3.svg",
+      "title": "Engineering",
+      "sub_title": "Complex customer works"
+    },
+    {
+      "icon": "/img/section_2_introduction/leading-img-4.svg",
+      "title": "Energy",
+      "sub_title": "Sun, oil and gas"
+    }
+  ]
+}

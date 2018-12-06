@@ -1,0 +1,30 @@
+{
+  "title": "SUSTAINABILITY GOALS",
+  "description": "Our team of experts in the areas of architecture, engineering, management and construction bring you the insight and advice you need for your project.",
+  "list": [
+    {
+      "content": "Ecologic materials and oils",
+      "active": false
+    },
+    {
+      "content": "Human charity for fourth world countries",
+      "active": false
+    },
+    {
+      "content": "Renovable products from the scratch",
+      "active": false
+    },
+    {
+      "content": "State of art metal roofing",
+      "active": false
+    },
+    {
+      "content": "Great experts from all the world",
+      "active": false
+    },
+    {
+      "content": "Home and skyscraper constructions",
+      "active": false
+    }
+  ]
+}
