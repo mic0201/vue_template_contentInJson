@@ -1,0 +1,126 @@
+{
+  "title": "OUR CREATIVE TEAM",
+  "description": "Utenim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderi.",
+  "member": [
+    {
+      "image": "/img/section_10_team/team-1.jpg",
+      "name": "JACK CHRISTIAN",
+      "title": "DIRECTOR",
+      "description": "Lorem Ipsum is simply dummy text of the printing and",
+      "social": [
+        {
+          "name": "facebook",
+          "link": "https://www.google.com"
+        },
+        {
+          "name": "twitter",
+          "link": "https://www.google.com"
+        },
+        {
+          "name": "telegram",
+          "link": "https://www.google.com"
+        }
+      ]
+    },
+    {
+      "image": "/img/section_10_team/team-1.jpg",
+      "name": "JACK CHRISTIAN",
+      "title": "DIRECTOR",
+      "description": "Lorem Ipsum is simply dummy text of the printing and",
+      "social": [
+        {
+          "name": "facebook",
+          "link": "https://www.google.com"
+        },
+        {
+          "name": "twitter",
+          "link": "https://www.google.com"
+        },
+        {
+          "name": "telegram",
+          "link": "https://www.google.com"
+        }
+      ]
+    },
+    {
+      "image": "/img/section_10_team/team-1.jpg",
+      "name": "JACK CHRISTIAN",
+      "title": "DIRECTOR",
+      "description": "Lorem Ipsum is simply dummy text of the printing and",
+      "social": [
+        {
+          "name": "facebook",
+          "link": "https://www.google.com"
+        },
+        {
+          "name": "twitter",
+          "link": "https://www.google.com"
+        },
+        {
+          "name": "telegram",
+          "link": "https://www.google.com"
+        }
+      ]
+    },
+    {
+      "image": "/img/section_10_team/team-1.jpg",
+      "name": "JACK CHRISTIAN",
+      "title": "DIRECTOR",
+      "description": "Lorem Ipsum is simply dummy text of the printing and",
+      "social": [
+        {
+          "name": "facebook",
+          "link": "https://www.google.com"
+        },
+        {
+          "name": "twitter",
+          "link": "https://www.google.com"
+        },
+        {
+          "name": "telegram",
+          "link": "https://www.google.com"
+        }
+      ]
+    },
+    {
+      "image": "/img/section_10_team/team-1.jpg",
+      "name": "JACK CHRISTIAN",
+      "title": "DIRECTOR",
+      "description": "Lorem Ipsum is simply dummy text of the printing and",
+      "social": [
+        {
+          "name": "facebook",
+          "link": "https://www.google.com"
+        },
+        {
+          "name": "twitter",
+          "link": "https://www.google.com"
+        },
+        {
+          "name": "telegram",
+          "link": "https://www.google.com"
+        }
+      ]
+    },
+    {
+      "image": "/img/section_10_team/team-1.jpg",
+      "name": "JACK CHRISTIAN",
+      "title": "DIRECTOR",
+      "description": "Lorem Ipsum is simply dummy text of the printing and",
+      "social": [
+        {
+          "name": "facebook",
+          "link": "https://www.google.com"
+        },
+        {
+          "name": "twitter",
+          "link": "https://www.google.com"
+        },
+        {
+          "name": "telegram",
+          "link": "https://www.google.com"
+        }
+      ]
+    }
+  ]
+}

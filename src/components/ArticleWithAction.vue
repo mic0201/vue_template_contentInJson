@@ -1,43 +1,48 @@
 <template lang="pug">
-  #JoinUs.flex
+  .ArticleWithAction.flex(:class="'section'+sectionIndex")
     .info
-      h2.title {{ joinUs.title }}
-      p.description {{ joinUs.description }}
+      h2.title {{ articleWithAction.title }}
+      p.description {{ articleWithAction.description }}
       .box.flex
-        .value.flex(v-for="val in joinUs.data")
+        .value.flex(v-for="val in articleWithAction.data")
           .icon
           .amount {{ val.value }}
           h6.sub_title {{ val.title }}
     .action.flex
       a.btn.fillout.flex
         .icon.flex
-        span {{ joinUs.button_text }}
+        span {{ articleWithAction.button_text }}
 </template>
 
 <script>
-import { getIcon1, getIcon2, getBtnIcon } from "@/service/section_5_joinUsService.js";
 
 export default {
-  name: "JoinUs",
+  name: "ArticleWithAction",
   props: {
-    joinUs: Object
+    sectionIndex: String,
+    articleWithAction: Object,
+    icon1: String,
+    icon2: String,
+    icon3: String
   },
-  async created() {
-    this.appendIcon();
+  async mounted() {
+    setTimeout(() => {
+      this.appendIcon();
+    }, 50)
   },
+
   methods: {
     async appendIcon() {
-      let icon1 = await getIcon1();
-      let icon2 = await getIcon2();
-      let btnIcon = await getBtnIcon();
-      document.querySelectorAll(".box .value .icon")[0].innerHTML = icon1.data;
-      document.querySelectorAll(".box .value .icon")[1].innerHTML = icon2.data;
-      document.querySelectorAll(".action .icon")[0].innerHTML = btnIcon.data;
-      document.querySelectorAll(".action .icon")[0].style.fill = '#fff';
-      document.querySelectorAll(".action .icon svg")[0].style.width = '2rem';
-      for (let i = 0; i < 2; i++) {
-        document.querySelectorAll(".box .value .icon svg path")[i].style.fill = "#f3b007";
-        document.querySelectorAll(".box .value .icon svg")[i].style.width = "2.6rem";
+      let icon = document.querySelectorAll(`.ArticleWithAction.section${this.sectionIndex} .box .value .icon`),
+        actionIcon = document.querySelectorAll(`.ArticleWithAction.section${this.sectionIndex} .action .icon`);
+      icon[0].innerHTML = this.icon1;
+      icon[1].innerHTML = this.icon2;
+      actionIcon[0].innerHTML = this.icon3;
+      actionIcon[0].style.fill = '#fff';
+      actionIcon[0].children[0].style.width = '2rem';
+      for (let i = 0; i < icon.length; i++) {
+        icon[i].children[0].style.width = "2.6rem"
+        icon[i].children[0].children[0].style.fill = "#f3b007";
       }
     }
   }
@@ -45,10 +50,12 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-  #JoinUs
+  .ArticleWithAction
     &.flex
       > div
         width: calc(100% / 2)
+      &.reverse
+        flex-direction: row-reverse
 
     .info
       .title

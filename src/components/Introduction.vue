@@ -4,14 +4,14 @@
       .card.flex(v-for="card in introduction.card")
         .img
           img(:src="card.img")
-        .info
+        .info.contentDescrFontColor
           h3 {{ card.title }}
           p.moreSmaller {{ card.description }}
     .leading-container.flex
       .leading.flex(v-for="leading in introduction.leading")
         .icon
           img(:src="leading.icon")
-        .info
+        .info.contentDescrFontColor
           h4 {{ leading.title }}
           h6.sub {{ leading.sub_title }}
 
@@ -28,7 +28,6 @@ export default {
 
 <style lang="sass" scoped>
   #Introduction
-
     .card-container
       &.flex
         flex-wrap: wrap
@@ -48,7 +47,6 @@ export default {
         .img
         .info
           padding: 1.3rem 0.8rem
-          color: #434343
           text-align: center
           p
             opacity: 0.95
@@ -73,7 +71,6 @@ export default {
         .info
           border-left: 1px solid rgba(0, 0, 0, 0.2)
           padding: 0px 15px
-          color: #434343
           .sub
             font-weight: 400
 

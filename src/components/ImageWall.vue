@@ -1,14 +1,14 @@
 <template lang="pug">
   #ImageWall(:class="imageWall.multiple ? 'grid' : 'flex' ")
-    .image.image1(:style="{ backgroundImage: `url(${imageWall.image1})` }")
+    div(:class="`${lightless ? 'lightless image image1' : 'image image1'}`" :style="{ backgroundImage: `url(${imageWall.image1})` }")
       .guaranteed.card(v-if="imageWall.card")
         h4.title {{ imageWall.card.title }}
         h5.sub_title {{ imageWall.card.sub_title }}
         p.description.moreSmaller {{ imageWall.card.description }}
         .btn
           span {{ imageWall.card.button_text }}
-    .image.image2(:style="{ backgroundImage: `url(${imageWall.image2})` }")
-    .image.image3(:style="{ backgroundImage: `url(${imageWall.image3})` }")
+    div(:class="`${lightless ? 'lightless image image2' : 'image image2'}`" :style="{ backgroundImage: `url(${imageWall.image2})` }")
+    div(:class="`${lightless ? 'lightless image image3' : 'image image3'}`" :style="{ backgroundImage: `url(${imageWall.image3})` }")
 
 </template>
 
@@ -16,7 +16,8 @@
 export default {
   name: "ImageWall",
   props: {
-    imageWall: Object
+    imageWall: Object,
+    lightless: Boolean
   }
 };
 </script>
@@ -37,13 +38,15 @@ export default {
       .image2, .image3
         display: none
 
+    .lightless
+      &:hover
+        filter: brightness(0.7)
+
     .image
       position: relative
       background-size: cover
       background-position: 50% 50%
       transition: filter .3s
-      &:hover
-        filter: brightness(0.7)
     .image1
       grid-area: Image1
     .image2

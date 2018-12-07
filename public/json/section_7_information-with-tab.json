@@ -1,0 +1,91 @@
+{
+  "tab_header": [
+    "BUILDINGS",
+    "INTERIORS",
+    "HOMES",
+    "OTHER PRODUCTS"
+  ],
+  "tab": {
+    "BUILDINGS": {
+      "title": "BUILDINGS",
+      "description": "Lorem ipsum dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt utlabore et dolore magna aliqua. Utenim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.",
+      "score": [
+        {
+          "item": "GREEN MATERIAL",
+          "value": 0.8
+        },
+        {
+          "item": "BUILDINGS",
+          "value": 0.2
+        },
+        {
+          "item": "RENOVABLE",
+          "value": 0.1
+        },
+        {
+          "item": "HOMES",
+          "value": 0.67
+        }
+      ],
+      "attachment": {}
+    },
+    "INTERIORS": {
+      "title": "OUR GROWING NUMBERS",
+      "description": "Lorem ipsum dolor sit amet commodo cons.",
+      "score": [
+        {
+          "item": "GREEN MATERIAL",
+          "value": 0.8
+        },
+        {
+          "item": "RENOVABLE",
+          "value": 0.8
+        }
+      ],
+      "attachment": {
+        "image": "/img/section_7_information-with-tab/image-1.jpg"
+      }
+    },
+    "HOMES": {
+      "title": "HOMES",
+      "description": "Lorem ipsum dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt utlabore et dolore magna aliqua. Utenim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.",
+      "score": [
+        {
+          "item": "GREEN MATERIAL",
+          "value": 0.8
+        },
+        {
+          "item": "BUILDINGS",
+          "value": 0.5
+        },
+        {
+          "item": "RENOVABLE",
+          "value": 0.6
+        },
+        {
+          "item": "HOMES",
+          "value": 0.75
+        }
+      ],
+      "attachment": {
+        "image": "/img/section_7_information-with-tab/image-1.jpg",
+        "video": "https://www.youtube.com/embed/nJlRzkDR9tU"
+      }
+    },
+    "OTHER PRODUCTS": {
+      "title": "OTHER PRODUCTS",
+      "description": "Lorem ipsum dolor sit amet commodo cons.",
+      "score": [
+        {
+          "item": "GREEN MATERIAL",
+          "value": 0.8
+        },
+        {
+          "item": "RENOVABLE",
+          "value": 0.8
+        }
+      ],
+      "attachment": {}
+    }
+  }
+}

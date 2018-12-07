@@ -1,0 +1,24 @@
+{
+  "title": "INTERNATIONAL SCALE",
+  "description": "We believe in making it easier for organisations to work and grow on an international scale",
+  "card": [
+    {
+      "icon": "",
+      "title": "LEADERSHIP",
+      "description": "Purus expedita fusce temporibus est odit mi quoeliquid sempere",
+      "back_side": "Interdum iusto pulvinar consequuntur augue optio, repellat fuga! Purus expedita fusce temporibus est odit mi quos? Aliquid semper, veritatis dignissimos."
+    },
+    {
+      "icon": "",
+      "title": "VISION",
+      "description": "Purus expedita fusce temporibus est odit mi quoeliquid sempere",
+      "back_side": "Interdum iusto pulvinar consequuntur augue optio, repellat fuga! Purus expedita fusce temporibus est odit mi quos? Aliquid semper, veritatis dignissimos."
+    },
+    {
+      "icon": "",
+      "title": "CORE VALUES",
+      "description": "Purus expedita fusce temporibus est odit mi quoeliquid sempere",
+      "back_side": "Interdum iusto pulvinar consequuntur augue optio, repellat fuga! Purus expedita fusce temporibus est odit mi quos? Aliquid semper, veritatis dignissimos."
+    }
+  ]
+}

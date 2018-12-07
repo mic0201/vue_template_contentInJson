@@ -1,8 +1,8 @@
 <template lang="pug">
   #ArticleWithList
-    h2.title {{ article.title }}
-    p.description {{ article.description }}
-    ul.list
+    h2.title.contentTitleFontColor {{ article.title }}
+    p.description.contentDescrFontColor {{ article.description }}
+    ul.list.contentDescrFontColor
       li(v-for="list in article.list" @mouseover="triggerActive(list, true)" @mouseleave="triggerActive(list, false)")
         //- minus
         svg.minus(v-if="list.active" aria-hidden="true" data-prefix="fas" data-icon="minus" class="svg-inline--fa fa-minus fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512")
@@ -22,7 +22,6 @@ export default {
   },
   methods: {
     triggerActive(list, active) {
-      console.log(list)
       list.active = active
     }
   }
@@ -33,11 +32,6 @@ export default {
 
   #ArticleWithList
     width: 100%
-    .title
-      color: #282828
-    .list, .description
-      color: #434343
-
     li
       position: relative
       margin: 0.6rem 0
