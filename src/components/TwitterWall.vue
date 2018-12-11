@@ -6,8 +6,8 @@
           .img-container
             img(:src="wall.image")
           .info-container.contentDescrFontColor.flex
-            p.description {{ wall.description }}
-            small.url {{ wall.url }}
+            p.description.supportHtml
+            a.small.url(:href="wall.url" target="_blank") {{ wall.url }}
             small.date {{ wall.date }}
     .slider-bar.flex
       .bar-container
@@ -21,11 +21,21 @@ export default {
   props: {
     twitterWall: Object
   },
-  data: function() {
+  data: function () {
     return {
       carouselIndex: 0,
       autoCarousel: 0
     };
+  },
+  watch: {
+    twitterWall: {
+      deep: true,
+      handler: function (newVal, oldVal) {
+        this.$nextTick(() => {
+          this.createTwitterHtml(newVal)
+        })
+      }
+    }
   },
   mounted() {
     setTimeout(() => {
@@ -38,20 +48,20 @@ export default {
       return sliderIndex * 3 <= wallIndex && wallIndex < 3 + sliderIndex * 3 ? true : false;
     },
     carouselWall() {
-        let index = this.carouselIndex % Math.ceil(this.twitterWall.commentList.length / 3);
-        let querySelectorAll = ele => document.querySelectorAll(ele);
-        querySelectorAll(".slider-container")[0].style.transform = `translateX(-${index * 100}%)`;
-        querySelectorAll(".slider-bar .bar")[index].classList.add("active");
-        if (index === 0) {
-          index = Math.ceil(this.twitterWall.commentList.length / 3)
-        }
-        querySelectorAll(".slider-bar .bar")[index - 1].classList.remove("active");
-        this.carouselIndex++;
+      let index = this.carouselIndex % Math.ceil(this.twitterWall.commentList.length / 3);
+      let querySelectorAll = ele => document.querySelectorAll(ele);
+      querySelectorAll(".slider-container")[0].style.transform = `translateX(-${index * 100}%)`;
+      querySelectorAll(".slider-bar .bar")[index].classList.add("active");
+      if (index === 0) {
+        index = Math.ceil(this.twitterWall.commentList.length / 3)
+      }
+      querySelectorAll(".slider-bar .bar")[index - 1].classList.remove("active");
+      this.carouselIndex++;
     },
     autoCarouselWall() {
       this.autoCarousel = setInterval(() => {
         this.carouselWall()
-      }, 3000);
+      }, 5000);
     },
     goToSlider(sliderIndex) {
       let index = (this.carouselIndex - 1) % Math.ceil(this.twitterWall.commentList.length / 3)
@@ -60,6 +70,15 @@ export default {
       clearInterval(this.autoCarousel)
       this.autoCarouselWall()
       this.carouselWall()
+    },
+    createTwitterHtml(arr) {
+      let newArr = JSON.parse(JSON.stringify(arr)),
+        href = (param, mark) => `<a href="https://twitter.com/${param}" target="_blank">${mark}$1</a>`
+      newArr.commentList.forEach((d, i) => {
+        d.description = d.description.replace(/@(\w+)/g, href('$1', '@'))
+        d.description = d.description.replace(/#(\w+)/g, href('search?q=%23$1&src=hash', '#'))
+        document.querySelectorAll('.wall p.description.supportHtml')[i].innerHTML = d.description
+      })
     }
   }
 };
@@ -86,7 +105,7 @@ export default {
         margin: 1.45rem 1rem
       .info-container
         width: 80%
-        p, small
+        p, small, a.small
           font-size: .8rem
           margin-bottom: .5rem
         &.flex
