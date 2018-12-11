@@ -15,7 +15,6 @@
 </template>
 
 <script>
-
 export default {
   name: "ArticleWithAction",
   props: {
@@ -25,26 +24,38 @@ export default {
     icon2: String,
     icon3: String
   },
-  async mounted() {
-    setTimeout(() => {
-      this.appendIcon();
-    }, 50)
+  data: function() {
+    return {
+      articleWithActionData: []
+    };
   },
-
+  watch: {
+    articleWithAction: {
+      deep: true,
+      handler: function(newVal, oldVal) {
+        if (newVal.data) {
+          this.$nextTick(() => {
+            this.appendIcon();
+          })
+        }
+      }
+    }
+  },
   methods: {
-    async appendIcon() {
+    appendIcon() {
       let icon = document.querySelectorAll(`.ArticleWithAction.section${this.sectionIndex} .box .value .icon`),
         actionIcon = document.querySelectorAll(`.ArticleWithAction.section${this.sectionIndex} .action .icon`);
       icon[0].innerHTML = this.icon1;
       icon[1].innerHTML = this.icon2;
       actionIcon[0].innerHTML = this.icon3;
-      actionIcon[0].style.fill = '#fff';
-      actionIcon[0].children[0].style.width = '2rem';
+      actionIcon[0].style.fill = "#fff";
+      actionIcon[0].children[0].style.width = "2rem";
       for (let i = 0; i < icon.length; i++) {
-        icon[i].children[0].style.width = "2.6rem"
+        icon[i].children[0].style.width = "2.6rem";
         icon[i].children[0].children[0].style.fill = "#f3b007";
       }
-    }
+    },
+    plusAnimation(val) {}
   }
 };
 </script>
@@ -91,6 +102,7 @@ export default {
         justify-content: center
 
         .btn
+          cursor: pointer
           &.flex
             align-items: center
           &:hover

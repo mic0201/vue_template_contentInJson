@@ -7,7 +7,10 @@
         .icon
         .info.contentDescrFontColor
           h3.title {{ card.title }}
-          p.description {{ card.description }}
+          .description
+            .slider.flex
+              p {{ card.description }}
+              p {{ card.back_side }}
 </template>
 
 <script>
@@ -65,8 +68,19 @@ export default {
 
         &:hover
           transform: translateY(-5%)
+          .slider
+            transform: translateX(calc(-100% - 30px))
 
         .icon
           padding: 0 2rem 0 .6rem
 
+        .description
+          overflow: hidden
+          .slider
+            transition: transform .7s
+            p
+              width: 100%
+              flex: 0 0 auto
+              &:nth-child(1)
+                margin-right: 30px
 </style>

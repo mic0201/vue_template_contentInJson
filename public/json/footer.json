@@ -1,0 +1,103 @@
+{
+  "left": {
+    "logo_part1": "LIGHT",
+    "logo_part2": "WIRE",
+    "description": "We are the leaders in the construction and building industries. We are world wide. We never give up on the new challenges. Get in touch now!",
+    "social": [
+      {
+        "name": "facebook",
+        "link": "https://www.google.com"
+      },
+      {
+        "name": "twitter",
+        "link": "https://www.google.com"
+      },
+      {
+        "name": "youtube",
+        "link": "https://www.google.com"
+      },
+      {
+        "name": "linkedin",
+        "link": "https://www.google.com"
+      }
+    ]
+  },
+  "mid": {
+    "tree": [
+      {
+        "title": "USEFUL RESOURCES",
+        "node": [
+          {
+            "name": "HOME",
+            "link": "https://www.google.com"
+          },
+          {
+            "name": "ABOUT US",
+            "link": "https://www.google.com"
+          },
+          {
+            "name": "SUBSCRIBE NOW",
+            "link": "https://www.google.com"
+          },
+          {
+            "name": "CONTACTS",
+            "link": "https://www.google.com"
+          },
+          {
+            "name": "OUR PARTNERS",
+            "link": "https://www.google.com"
+          },
+          {
+            "name": "TEAM AND MEMBERS",
+            "link": "https://www.google.com"
+          }
+        ]
+      },
+      {
+        "title": "OUR COMPANY",
+        "node": [
+          {
+            "name": "TECH LAB",
+            "link": "https://www.google.com"
+          },
+          {
+            "name": "COMPANY HISTORY",
+            "link": "https://www.google.com"
+          },
+          {
+            "name": "SUPPORT AREA",
+            "link": "https://www.google.com"
+          },
+          {
+            "name": "CONTACTS",
+            "link": "https://www.google.com"
+          },
+          {
+            "name": "OUR PARTNERS",
+            "link": "https://www.google.com"
+          },
+          {
+            "name": "TEAM AND MEMBERS",
+            "link": "https://www.google.com"
+          }
+        ]
+      }
+    ]
+  },
+  "right": {
+    "title": "OUR PROMISE TO YOU",
+    "list": [
+      "Free QUoute Delivery",
+      "No Hassle Refund Policy",
+      "Considerate scheme",
+      "Safe verified methods"
+    ],
+    "pay_methods": [
+      "/img/footer/visa.png",
+      "/img/footer/visa.png",
+      "/img/footer/visa.png",
+      "/img/footer/visa.png",
+      "/img/footer/visa.png"
+    ]
+  }
+}

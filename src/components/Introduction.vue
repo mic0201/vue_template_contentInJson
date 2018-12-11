@@ -1,7 +1,7 @@
 <template lang="pug">
   #Introduction
     .card-container.flex
-      .card.flex(v-for="card in introduction.card")
+      .card.flex(v-for="card in introduction.card" :class="animate")
         .img
           img(:src="card.img")
         .info.contentDescrFontColor
@@ -23,6 +23,21 @@ export default {
   props: {
     introduction: Object
   },
+  data: function() {
+    return {
+      animate: "active"
+    };
+  },
+  mounted() {
+    this.initialAnimate()
+  },
+  methods: {
+    initialAnimate() {
+      setTimeout(() => {
+        this.animate = "";
+      }, 300);
+    }
+  }
 };
 </script>
 
@@ -35,16 +50,30 @@ export default {
         width: calc(100% / 3 - 45px * 2)
         margin: 20px 45px
         transition: transform .3s
-        &:nth-child(n)
-          transform: translateY(-30%)
-          &:hover
-            transform: translateY(-35%)
+        transform: translateY(-30%) scale(1)
+        &.active
+          transform: translateY(-30%) scale(0.4)
+        &:hover
+          transform: translateY(-35%)
+          .img
+            img
+              transform: scale(1.5)
+        &:nth-child(1)
+          transition: transform .3s
+        &:nth-child(2)
+          transition: transform .7s
+        &:nth-child(3)
+          transition: transform 1s
+        &:nth-child(4)
+          transition: transform 1.4s
         &.flex
           flex-direction: column
 
-        > div
-
         .img
+          overflow: hidden
+          img
+            transition: transform .3s, opacity .3s
+
         .info
           padding: 1.3rem 0.8rem
           text-align: center

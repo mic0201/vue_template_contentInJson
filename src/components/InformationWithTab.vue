@@ -7,13 +7,15 @@
       .title-box
         h2.title.contentTitleFontColor {{ content.title }}
         p.description.contentDescrFontColor {{ content.description }}
+
       .attachment-box
         img(v-if="content.attachment.image" :src="content.attachment.image")
-        .img-backdrop(v-if="content.attachment.video")
+        .img-backdrop(v-if="content.attachment.video" @click="triggerVideo(true)")
           .triangle.playBtnAnimation
         .iframe-container.flex(v-if="isVideoOpen && content.attachment.video")
           .back-drop(@click="triggerVideo(false)")
           iframe(:src="content.attachment.video")
+
       .score-box.flex
         .bar-container(v-for="bar in content.score")
           h5.item {{ bar.item }}
@@ -124,6 +126,7 @@ export default {
         grid-area: Attachment
         align-self: center
         .img-backdrop
+          cursor: pointer
           position: absolute
           width: 100%
           height: 100%

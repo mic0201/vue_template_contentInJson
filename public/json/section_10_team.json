@@ -121,6 +121,106 @@
           "link": "https://www.google.com"
         }
       ]
+    },
+    {
+      "image": "/img/section_10_team/team-1.jpg",
+      "name": "JACK CHRISTIAN",
+      "title": "DIRECTOR",
+      "description": "Lorem Ipsum is simply dummy text of the printing and",
+      "social": [
+        {
+          "name": "facebook",
+          "link": "https://www.google.com"
+        },
+        {
+          "name": "twitter",
+          "link": "https://www.google.com"
+        },
+        {
+          "name": "telegram",
+          "link": "https://www.google.com"
+        }
+      ]
+    },
+    {
+      "image": "/img/section_10_team/team-1.jpg",
+      "name": "JACK CHRISTIAN",
+      "title": "DIRECTOR",
+      "description": "Lorem Ipsum is simply dummy text of the printing and",
+      "social": [
+        {
+          "name": "facebook",
+          "link": "https://www.google.com"
+        },
+        {
+          "name": "twitter",
+          "link": "https://www.google.com"
+        },
+        {
+          "name": "telegram",
+          "link": "https://www.google.com"
+        }
+      ]
+    },
+    {
+      "image": "/img/section_10_team/team-1.jpg",
+      "name": "JACK CHRISTIAN",
+      "title": "DIRECTOR",
+      "description": "Lorem Ipsum is simply dummy text of the printing and",
+      "social": [
+        {
+          "name": "facebook",
+          "link": "https://www.google.com"
+        },
+        {
+          "name": "twitter",
+          "link": "https://www.google.com"
+        },
+        {
+          "name": "telegram",
+          "link": "https://www.google.com"
+        }
+      ]
+    },
+    {
+      "image": "/img/section_10_team/team-1.jpg",
+      "name": "JACK CHRISTIAN",
+      "title": "DIRECTOR",
+      "description": "Lorem Ipsum is simply dummy text of the printing and",
+      "social": [
+        {
+          "name": "facebook",
+          "link": "https://www.google.com"
+        },
+        {
+          "name": "twitter",
+          "link": "https://www.google.com"
+        },
+        {
+          "name": "telegram",
+          "link": "https://www.google.com"
+        }
+      ]
+    },
+    {
+      "image": "/img/section_10_team/team-1.jpg",
+      "name": "JACK CHRISTIAN",
+      "title": "DIRECTOR",
+      "description": "Lorem Ipsum is simply dummy text of the printing and",
+      "social": [
+        {
+          "name": "facebook",
+          "link": "https://www.google.com"
+        },
+        {
+          "name": "twitter",
+          "link": "https://www.google.com"
+        },
+        {
+          "name": "telegram",
+          "link": "https://www.google.com"
+        }
+      ]
     }
   ]
 }

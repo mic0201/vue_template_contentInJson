@@ -8,27 +8,27 @@
       "item": [
         {
           "name": "WORKER",
-          "link": ""
+          "link": "https://google.com"
         },
         {
           "name": "INDUSTRY",
-          "link": ""
+          "link": "https://google.com"
         },
         {
           "name": "FACTORY",
-          "link": ""
+          "link": "https://google.com"
         },
         {
           "name": "CONSTRUCTION",
-          "link": ""
+          "link": "https://google.com"
         },
         {
           "name": "TECH",
-          "link": ""
+          "link": "https://google.com"
         },
         {
           "name": "INTRO",
-          "link": ""
+          "link": "https://google.com"
         }
       ]
     },
@@ -42,19 +42,19 @@
           "item": [
             {
               "name": "ABOUT",
-              "link": ""
+              "link": "https://google.com"
             },
             {
               "name": "HISTORY",
-              "link": ""
+              "link": "https://google.com"
             },
             {
               "name": "CAREER",
-              "link": ""
+              "link": "https://google.com"
             },
             {
               "name": "PARTNERS",
-              "link": ""
+              "link": "https://google.com"
             }
           ]
         },
@@ -64,19 +64,19 @@
           "item": [
             {
               "name": "TECH",
-              "link": ""
+              "link": "https://google.com"
             },
             {
               "name": "INTRO",
-              "link": ""
+              "link": "https://google.com"
             },
             {
               "name": "TECH",
-              "link": ""
+              "link": "https://google.com"
             },
             {
               "name": "INTRO",
-              "link": ""
+              "link": "https://google.com"
             }
           ]
         },
@@ -86,11 +86,11 @@
           "item": [
             {
               "name": "TECH",
-              "link": ""
+              "link": "https://google.com"
             },
             {
               "name": "INTRO",
-              "link": ""
+              "link": "https://google.com"
             }
           ]
         },
@@ -100,31 +100,31 @@
           "item": [
             {
               "name": "TECH",
-              "link": ""
+              "link": "https://google.com"
             },
             {
               "name": "INTRO",
-              "link": ""
+              "link": "https://google.com"
             }
           ]
         },
         {
           "name": "TECH",
-          "link": ""
+          "link": "https://google.com"
         },
         {
           "name": "INTRO",
-          "link": ""
+          "link": "https://google.com"
         }
       ]
     },
     {
       "name": "PROJECTS",
-      "link": ""
+      "link": "https://google.com"
     },
     {
       "name": "BLOG",
-      "link": ""
+      "link": "https://google.com"
     },
     {
       "name": "ELEMENTS",
@@ -136,60 +136,210 @@
       ],
       "tabData": {
         "COMPONENT": [
-          "ICONS",
-          "COUNTERS",
-          "COUNTDOWNS",
-          "PROGRESS BARS",
-          "CIRCLE PROGRESS BARS",
-          "TIMELINE",
-          "CONTACT FORM",
-          "BUTTONS",
-          "IMAGE BOXES",
-          "ADVANCED IMAGE BOXES",
-          "CONTENT BOXES",
-          "SOCIAL MEDIA",
-          "LISTS",
-          "GOOGLE MAPS",
-          "TYPOGRAPHY",
-          "ADVANCED TABLES",
-          "LIGHTBOX AND POPUPS",
-          "SLIDERS AND CAROUSELS",
-          "SCROLL BOX",
-          "COLLAPSE",
-          "TABS",
-          "ACCORDION",
-          "GRID",
-          "MASONRY",
-          "SECTION IMAGE",
-          "SECTION PARALLAX",
-          "SECTION SLIDER",
-          "SECTION VIDEO",
-          "SECTION ANIMATION",
-          "FOOTER PARALLAX",
-          "FOOTER MINIMAL",
-          "FOOTER BASE"
+          {
+            "name": "ICONS",
+            "link": "https://google.com"
+          },
+          {
+            "name": "COUNTERS",
+            "link": "https://google.com"
+          },
+          {
+            "name": "COUNTDOWNS",
+            "link": "https://google.com"
+          },
+          {
+            "name": "PROGRESS BARS",
+            "link": "https://google.com"
+          },
+          {
+            "name": "CIRCLE PROGRESS BARS",
+            "link": "https://google.com"
+          },
+          {
+            "name": "TIMELINE",
+            "link": "https://google.com"
+          },
+          {
+            "name": "CONTACT FORM",
+            "link": "https://google.com"
+          },
+          {
+            "name": "BUTTONS",
+            "link": "https://google.com"
+          },
+          {
+            "name": "IMAGE BOXES",
+            "link": "https://google.com"
+          },
+          {
+            "name": "ADVANCED IMAGE BOXES",
+            "link": "https://google.com"
+          },
+          {
+            "name": "CONTENT BOXES",
+            "link": "https://google.com"
+          },
+          {
+            "name": "SOCIAL MEDIA",
+            "link": "https://google.com"
+          },
+          {
+            "name": "LISTS",
+            "link": "https://google.com"
+          },
+          {
+            "name": "GOOGLE MAPS",
+            "link": "https://google.com"
+          },
+          {
+            "name": "TYPOGRAPHY",
+            "link": "https://google.com"
+          },
+          {
+            "name": "ADVANCED TABLES",
+            "link": "https://google.com"
+          },
+          {
+            "name": "LIGHTBOX AND POPUPS",
+            "link": "https://google.com"
+          },
+          {
+            "name": "SLIDERS AND CAROUSELS",
+            "link": "https://google.com"
+          },
+          {
+            "name": "SCROLL BOX",
+            "link": "https://google.com"
+          },
+          {
+            "name": "COLLAPSE",
+            "link": "https://google.com"
+          },
+          {
+            "name": "TABS",
+            "link": "https://google.com"
+          },
+          {
+            "name": "ACCORDION",
+            "link": "https://google.com"
+          },
+          {
+            "name": "GRID",
+            "link": "https://google.com"
+          },
+          {
+            "name": "MASONRY",
+            "link": "https://google.com"
+          },
+          {
+            "name": "SECTION IMAGE",
+            "link": "https://google.com"
+          },
+          {
+            "name": "SECTION PARALLAX",
+            "link": "https://google.com"
+          },
+          {
+            "name": "SECTION SLIDER",
+            "link": "https://google.com"
+          },
+          {
+            "name": "SECTION VIDEO",
+            "link": "https://google.com"
+          },
+          {
+            "name": "SECTION ANIMATION",
+            "link": "https://google.com"
+          },
+          {
+            "name": "FOOTER PARALLAX",
+            "link": "https://google.com"
+          },
+          {
+            "name": "FOOTER MINIMAL",
+            "link": "https://google.com"
+          },
+          {
+            "name": "FOOTER BASE",
+            "link": "https://google.com"
+          }
         ],
         "HEADERS": [
-          "MASONRY",
-          "SECTION IMAGE",
-          "SECTION PARALLAX",
-          "SECTION SLIDER",
-          "SECTION VIDEO",
-          "SECTION ANIMATION",
-          "FOOTER PARALLAX",
-          "FOOTER MINIMAL",
-          "FOOTER BASE"
+          {
+            "name": "MASONRY",
+            "link": "https://google.com"
+          },
+          {
+            "name": "SECTION IMAGE",
+            "link": "https://google.com"
+          },
+          {
+            "name": "SECTION PARALLAX",
+            "link": "https://google.com"
+          },
+          {
+            "name": "SECTION SLIDER",
+            "link": "https://google.com"
+          },
+          {
+            "name": "SECTION VIDEO",
+            "link": "https://google.com"
+          },
+          {
+            "name": "SECTION ANIMATION",
+            "link": "https://google.com"
+          },
+          {
+            "name": "FOOTER PARALLAX",
+            "link": "https://google.com"
+          },
+          {
+            "name": "FOOTER MINIMAL",
+            "link": "https://google.com"
+          },
+          {
+            "name": "FOOTER BASE",
+            "link": "https://google.com"
+          }
         ],
         "TITLE": [
-          "MASONRY",
-          "SECTION IMAGE",
-          "SECTION PARALLAX",
-          "SECTION SLIDER",
-          "SECTION VIDEO",
-          "SECTION ANIMATION",
-          "FOOTER PARALLAX",
-          "FOOTER MINIMAL",
-          "FOOTER BASE"
+          {
+            "name": "MASONRY",
+            "link": "https://google.com"
+          },
+          {
+            "name": "SECTION IMAGE",
+            "link": "https://google.com"
+          },
+          {
+            "name": "SECTION PARALLAX",
+            "link": "https://google.com"
+          },
+          {
+            "name": "SECTION SLIDER",
+            "link": "https://google.com"
+          },
+          {
+            "name": "SECTION VIDEO",
+            "link": "https://google.com"
+          },
+          {
+            "name": "SECTION ANIMATION",
+            "link": "https://google.com"
+          },
+          {
+            "name": "FOOTER PARALLAX",
+            "link": "https://google.com"
+          },
+          {
+            "name": "FOOTER MINIMAL",
+            "link": "https://google.com"
+          },
+          {
+            "name": "FOOTER BASE",
+            "link": "https://google.com"
+          }
         ]
       }
     }

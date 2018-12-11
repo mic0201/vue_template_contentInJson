@@ -26,6 +26,12 @@
       ArticleWithAction.component.reverse(sectionIndex="9" :articleWithAction="articleWithAction_9.articleWithAction" :icon1="articleWithAction_9.icon1" :icon2="articleWithAction_9.icon2" :icon3="articleWithAction_9.icon3")
     .team-container
       Team.component(:team="team")
+    .twitter-container
+      TwitterWall.component(:twitterWall="twitterWall")
+    .footer-container
+      Footer.component(:footer="footer")
+    .copyRight-container
+      CopyRight.component(:copyRight="copyRight")
 </template>
 
 <script>
@@ -39,6 +45,11 @@ import IntroductionType2 from "@/components/IntroductionType2";
 import InformationWithTab from "@/components/InformationWithTab";
 import Cooperation from "@/components/Cooperation";
 import Team from "@/components/Team";
+import TwitterWall from '@/components/TwitterWall'
+import Footer from '@/components/Footer'
+import CopyRight from '@/components/CopyRight'
+
+import { connectContract } from '@/contract/'
 
 import {
   getHeader,
@@ -53,7 +64,10 @@ import {
   getInformationWithTab,
   getCooperationIcon,
   getArticleWithAction_9,
-  getTeam
+  getTeam,
+  getTwitterWall,
+  getFooter,
+  getCopyRight
 } from "@/service/";
 
 export default {
@@ -68,10 +82,14 @@ export default {
     IntroductionType2,
     InformationWithTab,
     Cooperation,
-    Team
+    Team,
+    TwitterWall,
+    Footer,
+    CopyRight
   },
   data: function() {
     return {
+      contract: {},
       exception: ["articleWithAction_5", "articleWithAction_9"],
       header: {},
       keyVisual: {
@@ -97,10 +115,17 @@ export default {
         icon2: "",
         icon3: ""
       },
-      team: {}
+      team: {},
+      twitterWall: {},
+      footer: {
+        left: {},
+        mid: {},
+        right: {}
+      },
+      copyRight: {}
     };
   },
-  created() {
+  async created() {
     let apiList = [
       { name: "header", api: getHeader() },
       { name: "keyVisual", api: getKeyVisual() },
@@ -114,11 +139,17 @@ export default {
       { name: "informationWithTab", api: getInformationWithTab() },
       { name: "cooperation", api: getCooperationIcon() },
       { name: "articleWithAction_9", api: getArticleWithAction_9() },
-      { name: "team", api: getTeam() }
+      { name: "team", api: getTeam() },
+      { name: "twitterWall", api: getTwitterWall() },
+      { name: "footer", api: getFooter() },
+      { name: "copyRight", api: getCopyRight() }
     ];
     apiList.forEach(d => {
       this.getSomething(d.name, d.api)
     })
+    this.contract = await connectContract()
+    console.log('===== Contract Information =====', this.contract)
+    this.readContract()
   },
   methods: {
     async getSomething(type, service) {
@@ -132,8 +163,26 @@ export default {
         return;
       }
       this[type] = something.data;
+    },
+    async readContract() {
+      let _read = (methods) => {
+        return new Promise(resolve => {
+          this.contract.Instance[methods]((e,r) => {
+            if(!e) {
+              resolve(r)
+            }
+          })
+        })
+      }
+      let totalSupply = await _read('totalSupply'),
+        symbol = await _read('symbol')
+      console.log('contract Info')
+      console.log('totalSupply', totalSupply)
+      console.log('symbol', symbol)
+      // totalSupply.toNumber() = 1e27
+      // micaWeb3.fromWei(totalSupply.toNumber()) = 1e9
     }
-  }
+  },
 };
 </script>
 
@@ -142,7 +191,7 @@ export default {
     height: 80vh
 
     > div
-      &:nth-child(2n+2)
+      &:nth-child(2n+2):not(.copyRight-container)
         background-color: #FFFFFF
       &:nth-child(2n+3)
         background-color: #F5F4F5
@@ -150,10 +199,10 @@ export default {
     .header-container
       width: 100%
       position: fixed
+      z-index: 99
 
     .key-visual-container
       width: 100%
-      padding: 0px 30px
       background: url('../assets/img/keyBg.jpg') center center no-repeat
       background-size: cover
       background-attachment: fixed
@@ -169,7 +218,7 @@ export default {
 
     .article-wtih-action-container
       width: 100%
-      padding: 4rem 30px
+      padding: 4rem 0
       background: url('../assets/img/sectionBg-1.jpg') center center no-repeat
       background-size: cover
       background-attachment: fixed
@@ -185,5 +234,16 @@ export default {
 
     .team-container
       padding: 4rem 30px
+
+    .twitter-container
+      padding: 4rem 30px
+
+    .footer-container
+      padding: 4rem 30px
+
+    .copyRight-container
+      background-color: #F5F4F5
+      padding: 1.5rem 30px
+      border-top: 1px solid rgba(0, 0, 0, 0.2)
 
 </style>

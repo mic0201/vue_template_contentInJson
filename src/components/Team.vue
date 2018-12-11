@@ -23,6 +23,40 @@ export default {
   name: "Team",
   props: {
     team: Object
+  },
+  data: function() {
+    return {
+      team_slider_num: 0
+    };
+  },
+  watch: {
+    team: {
+      deep: true,
+      handler: function(newVal, oldVal) {
+        if (newVal.member.length) {
+          this.teamAnimation(newVal);
+        }
+      }
+    }
+  },
+  methods: {
+    teamAnimation(team) {
+      this._teamAnimation(team)
+      setInterval(() => {
+        this._teamAnimation(team)
+      }, 3000);
+    },
+    _teamAnimation(team) {
+      let index = team.member.length - 1,
+        num = 0
+      if (this.team_slider_num > index - 3 && this.team_slider_num < index ) {
+        this.team_slider_num = index - 3;
+      }else if (this.team_slider_num > index) {
+        this.team_slider_num = 0
+      }
+      document.querySelector(".member-slider").style.transform = `translateX(calc(-100% / ${index + 1} * ${this.team_slider_num}))`;
+      this.team_slider_num+= 4;
+    }
   }
 };
 </script>
@@ -53,6 +87,7 @@ export default {
       height: 300px
       overflow: auto
       .member-slider
+        transition: transform .7s
         &.flex
           flex-wrap: nowrap
         > .member
@@ -86,6 +121,7 @@ export default {
               > .social
                 width: calc(100% / 3)
                 text-align: center
+                cursor: pointer
                 > i
                   opacity: 0.8
                 &:hover

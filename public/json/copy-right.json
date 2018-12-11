@@ -1,0 +1,17 @@
+{
+  "copy_right": "© 2018 Fusions360",
+  "document": [
+    {
+      "name": "Terms of service",
+      "link": "doc/test.docx"
+    },
+    {
+      "name": "Refund policy",
+      "link": "doc/test.docx"
+    },
+    {
+      "name": "Contact us",
+      "link": "doc/test.docx"
+    }
+  ]
+}

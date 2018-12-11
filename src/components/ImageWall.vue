@@ -1,14 +1,17 @@
 <template lang="pug">
   #ImageWall(:class="imageWall.multiple ? 'grid' : 'flex' ")
-    div(:class="`${lightless ? 'lightless image image1' : 'image image1'}`" :style="{ backgroundImage: `url(${imageWall.image1})` }")
+    div(:class="`${lightless ? 'lightless image image1' : 'image image1'}`" :style="{ backgroundImage: `url(${imageWall.image1})` }" @click="setFullScreenPhoto(imageWall.image1)")
       .guaranteed.card(v-if="imageWall.card")
         h4.title {{ imageWall.card.title }}
         h5.sub_title {{ imageWall.card.sub_title }}
         p.description.moreSmaller {{ imageWall.card.description }}
         .btn
           span {{ imageWall.card.button_text }}
-    div(:class="`${lightless ? 'lightless image image2' : 'image image2'}`" :style="{ backgroundImage: `url(${imageWall.image2})` }")
-    div(:class="`${lightless ? 'lightless image image3' : 'image image3'}`" :style="{ backgroundImage: `url(${imageWall.image3})` }")
+    div(:class="`${lightless ? 'lightless image image2' : 'image image2'}`" :style="{ backgroundImage: `url(${imageWall.image2})` }" @click="setFullScreenPhoto(imageWall.image2)")
+    div(:class="`${lightless ? 'lightless image image3' : 'image image3'}`" :style="{ backgroundImage: `url(${imageWall.image3})` }" @click="setFullScreenPhoto(imageWall.image3)")
+
+    .fullScreenPhoto.flex(v-if="fullScreen" @click="leaveFullScreen")
+      img(:src="imgSrc" :class="imgActive")
 
 </template>
 
@@ -18,6 +21,26 @@ export default {
   props: {
     imageWall: Object,
     lightless: Boolean
+  },
+  data: function() {
+    return {
+      imgSrc: "",
+      imgActive: "",
+      fullScreen: false
+    }
+  },
+  methods: {
+    setFullScreenPhoto(img) {
+      this.imgSrc = img
+      this.fullScreen = true
+      setTimeout(() => {
+        this.imgActive = 'active'
+      }, 30)
+    },
+    leaveFullScreen() {
+      this.fullScreen = false
+      this.imgActive = ""
+    }
   }
 };
 </script>
@@ -77,4 +100,25 @@ export default {
         font-size: 0.7rem
         padding: 7px
         cursor: pointer
+
+    .fullScreenPhoto
+      &.flex
+        align-items: center
+        justify-content: center
+      position: fixed
+      z-index: 99
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+      background-color: rgba(0, 0, 0, 0.8)
+      > img
+        width: 50%
+        transform: translateX(30%)
+        opacity: 0
+        transition: transform .5s, opacity .5s
+        &.active
+          transform: translateX(0%)
+          opacity: 1
+
 </style>
