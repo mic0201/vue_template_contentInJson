@@ -1,12 +1,12 @@
 <template lang="pug">
-  #KeyVisual.flex
+  #KeyVisual.flex(:class="keyVisual.mode")
     .key-title
       .title-slider.flex
         h1(v-for="title in keyVisual.title") {{ title }}
       p {{ keyVisual.description }}
       .contract-info.box.flex
         .value.flex(v-for="header in contract_header")
-          .icon {{ header }}
+          h3.icon {{ header }}
           //- .amount {{ contract[header] }}
           h6.sub_title {{ contract[header] }}
     .key-action.flex
@@ -42,10 +42,11 @@ export default {
     contractInfo: {
       deep: true,
       handler: function (newVal, oldVal) {
+        console.log(newVal)
         this.contract = {
-          balance: newVal.balance.toString(10),
-          cap: newVal.cap.toString(10),
-          totalSupply: newVal.totalSupply.toString(10)
+          balance: this.substrNum(newVal.balance.dividedBy(1e18).toString(10)),
+          cap: this.substrNum(newVal.cap.dividedBy(1e18).toString(10)),
+          totalSupply: this.substrNum(newVal.totalSupply.dividedBy(1e18).toString(10))
         }
       }
     }
@@ -64,6 +65,13 @@ export default {
         ele.style.transform = `translateX(-${index * 100}%)`;
         this.num++
       }, 3000);
+    },
+    substrNum(str) {
+      if (str.indexOf('.') < 0) {
+        return str
+      }
+      let afterDecimalPoint = str.split('.')[1]
+      return str = str.replace(afterDecimalPoint, afterDecimalPoint.substr(0, 2))
     }
   }
 };
@@ -77,6 +85,7 @@ export default {
     &.flex
       align-items: center
     > div
+      position: relative
       width: 50%
       color: white
 

@@ -2,7 +2,8 @@
   .home
     .header-container
       Header.component(:header="header")
-    .key-visual-container(:style="{ backgroundImage: 'url('+ keyVisual.background_image +')' }")
+    .key-visual-container(:class="keyVisual.mode" :style="{ backgroundImage: 'url('+ keyVisual.background_image +')' }")
+      .black-back-drop
       KeyVisual.component(:keyVisual="keyVisual" :contractInfo="contractInfo")
     .introduction-container
       Introduction.component(:introduction="introduction")
@@ -207,10 +208,22 @@ export default {
       z-index: 99
 
     .key-visual-container
+      position: relative
       width: 100%
       // background: url('../assets/img/keyBg.jpg') center center no-repeat
       background-size: cover
       background-attachment: fixed
+      .black-back-drop
+        display: none
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background-color: rgba(0, 0, 0, 0.5)
+      &.dark
+        .black-back-drop
+          display: block
 
     .introduction-container
 

@@ -1,5 +1,5 @@
 <template lang="pug">
-  header.flex(:class="headerState")
+  header.flex(:class='`${headerState} ${header.mode}`')
     //- Logo
     .logo.flex
       h3 {{ header.logo_part1 }}
@@ -63,32 +63,37 @@ export default {
 <style scoped lang="sass">
   $headerHoverColor: #f3b007
 
+  @mixin show($top)
+    top: $top !important
+    opacity: 1 !important
+    transition: opacity .5s !important
+    transition-delay: .1s !important
+
+  @mixin showTab($top)
+    +show($top)
+
   @mixin showList($top, $left)
-    top: $top
-    left: $left
-    opacity: 1
-    transition: opacity .5s
-    transition-delay: .1s
+    left: $left !important
+    +show($top)
 
   @mixin whenHoverList
     color: white
     background-color: $headerHoverColor
 
+  @mixin disappear
+    position: absolute
+    top: -9999%
+    opacity: 0
+
   @mixin whenHoverItem
     color: #3e3939
     background-color: white
 
-  .disappear
-    position: absolute
-    top: -9999%
-    left: -9999%
-    opacity: 0
-
   header
+    color: white
     position: relative
     width: 100%
     height: 70px
-    color: white
     box-sizing: border-box
     transition: all .3s
     &.flex
@@ -139,6 +144,10 @@ export default {
           min-width: 100px
           height: 100%
           transition: background-color .15s
+
+          &:not(.tab)
+            position: relative
+
           &.flex
             align-items: center
             justify-content: center
@@ -148,6 +157,7 @@ export default {
             background-color: white
           a
             padding: 10px 12px
+
           .flex:not(.tabList)
             flex-direction: column
 
@@ -156,10 +166,12 @@ export default {
             > .itemList
               +showList(100%, 0)
             > .tabList
-              +showList(100%, calc(50% - 1200px / 2))
+              +showList(100%, 0)
 
           > .itemList
             min-width: 200px
+            &.disappear
+              +disappear
             &:hover
               > .subItem
                 +whenHoverList
@@ -169,6 +181,8 @@ export default {
 
             > .subItem
               position: relative
+              &.disappear
+                +disappear
               > .icon-container
                 position: absolute
                 right: 10px
@@ -188,6 +202,8 @@ export default {
 
               > .subItemList
                 min-width: 170px
+                &.disappear
+                  +disappear
                 &:hover
                   > .subItem_item
                     +whenHoverList
@@ -202,6 +218,8 @@ export default {
         top: 100%
         left: 0
         width: 100vw
+        &.disappear
+          +disappear
         &.flex
           align-items: center
 
@@ -235,7 +253,8 @@ export default {
           &.flex
             flex-direction: column
             flex-wrap: wrap
-
+          &.disappear
+            +disappear
           .tabData
             &:hover
               +whenHoverItem
