@@ -33,7 +33,7 @@
       ]
     },
     {
-      "name": "PAGE",
+      "name": "About Us",
       "isList": true,
       "item": [
         {
@@ -119,15 +119,15 @@
       ]
     },
     {
-      "name": "PROJECTS",
+      "name": "Fee Schedule",
       "link": "https://google.com"
     },
     {
-      "name": "BLOG",
+      "name": "FAQ",
       "link": "https://google.com"
     },
     {
-      "name": "ELEMENTS",
+      "name": "Partners",
       "isTab": true,
       "tabHeader": [
         "COMPONENT",
@@ -342,6 +342,10 @@
           }
         ]
       }
+    },
+    {
+      "name": "Marketplace",
+      "link": "https://google.com"
     }
   ],
   "button_text": "GET IN TOUCH"

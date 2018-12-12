@@ -7,23 +7,23 @@
   ],
   "tab": {
     "BUILDINGS": {
-      "title": "BUILDINGS",
-      "description": "Lorem ipsum dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt utlabore et dolore magna aliqua. Utenim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.",
+      "title": "GOLD Digital Certificate",
+      "description": "The PortaGold project’s GOLD digital certificate is created using smart contract protocol on the Ethereum blockchain",
       "score": [
         {
-          "item": "GREEN MATERIAL",
+          "item": "GOLD Issued",
           "value": 0.8
         },
         {
-          "item": "BUILDINGS",
+          "item": "GOLD Price",
           "value": 0.2
         },
         {
-          "item": "RENOVABLE",
+          "item": "GOLD Distributed",
           "value": 0.1
         },
         {
-          "item": "HOMES",
+          "item": "Market Cap",
           "value": 0.67
         }
       ],

@@ -7,7 +7,7 @@
     //- Menu
     .menu.flex
       span.item-container(v-for="(item, index) in header.menu" :key="index")
-        a.item.flex(:href="item.link") {{ item.name }}
+        a.item.flex(:href="item.link" :class="item.isTab ? 'tab' : ''") {{ item.name }}
           //- Layer 1
           .itemList.disappear.flex(v-if="item.isList")
             a.subItem(v-for="(subItem, subIndex) in item.item" :key="subIndex" :href="subItem.link") {{ subItem.name }}
@@ -36,7 +36,7 @@ export default {
   props: {
     header: Object
   },
-  data: function(data) {
+  data: function (data) {
     return {
       tabState: "open_1",
       headerState: "normal"
@@ -51,7 +51,7 @@ export default {
     },
     bindScrollEvent() {
       let self = this
-      document.addEventListener("scroll", function() {
+      document.addEventListener("scroll", function () {
         let scrollTop = document.documentElement.scrollTop;
         self.headerState = scrollTop > 150 ? "alt" : "normal";
       });
@@ -85,6 +85,7 @@ export default {
     opacity: 0
 
   header
+    position: relative
     width: 100%
     height: 70px
     color: white
@@ -135,7 +136,6 @@ export default {
         height: 100%
 
         > .item
-          position: relative
           min-width: 100px
           height: 100%
           transition: background-color .15s
@@ -156,7 +156,7 @@ export default {
             > .itemList
               +showList(100%, 0)
             > .tabList
-              +showList(100%, auto)
+              +showList(100%, calc(50% - 1200px / 2))
 
           > .itemList
             min-width: 200px
@@ -200,8 +200,8 @@ export default {
         max-width: 1200px
         position: absolute
         top: 100%
+        left: 0
         width: 100vw
-        transform: translateX(-50px)
         &.flex
           align-items: center
 

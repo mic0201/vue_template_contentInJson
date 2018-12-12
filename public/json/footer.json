@@ -5,19 +5,15 @@
     "description": "We are the leaders in the construction and building industries. We are world wide. We never give up on the new challenges. Get in touch now!",
     "social": [
       {
-        "name": "facebook",
-        "link": "https://www.google.com"
-      },
-      {
         "name": "twitter",
         "link": "https://www.google.com"
       },
       {
-        "name": "youtube",
+        "name": "telegram",
         "link": "https://www.google.com"
       },
       {
-        "name": "linkedin",
+        "name": "medium",
         "link": "https://www.google.com"
       }
     ]

@@ -2,7 +2,7 @@
   .home
     .header-container
       Header.component(:header="header")
-    .key-visual-container
+    .key-visual-container(:style="{ backgroundImage: 'url('+ keyVisual.background_image +')' }")
       KeyVisual.component(:keyVisual="keyVisual" :contractInfo="contractInfo")
     .introduction-container
       Introduction.component(:introduction="introduction")
@@ -14,7 +14,7 @@
       .component.article-with-list.flex
         ImageWall(:imageWall="imageWall_4")
         ArticleWithList(:article="article_4")
-    .article-wtih-action-container
+    .article-wtih-action-container(:style="{ backgroundImage: 'url('+ articleWithAction_5.articleWithAction.background_image +')' }")
       ArticleWithAction.component(sectionIndex="5" :articleWithAction="articleWithAction_5.articleWithAction" :icon1="articleWithAction_5.icon1" :icon2="articleWithAction_5.icon2" :icon3="articleWithAction_5.icon3")
     .introduction-type-2-container
       IntroductionType2.component(:introduction_6="introduction_6")
@@ -22,7 +22,7 @@
       InformationWithTab.component(:informationWithTab="informationWithTab")
     .cooperation-container
       Cooperation.component(:cooperation="cooperation")
-    .article-wtih-action-container
+    .article-wtih-action-container(:style="{ backgroundImage: 'url('+ articleWithAction_9.articleWithAction.background_image +')' }")
       ArticleWithAction.component.reverse(sectionIndex="9" :articleWithAction="articleWithAction_9.articleWithAction" :icon1="articleWithAction_9.icon1" :icon2="articleWithAction_9.icon2" :icon3="articleWithAction_9.icon3")
     .team-container
       Team.component(:team="team")
@@ -96,7 +96,6 @@ export default {
         cap: '',
         balance: ''
       },
-      exception: ["articleWithAction_5", "articleWithAction_9"],
       header: {},
       keyVisual: {
         title: []
@@ -161,7 +160,8 @@ export default {
     async getSomething(type, service) {
       let something = await service;
       console.log(type, something);
-      if (this.exception.indexOf(type) > -1) {
+      let exception = ["articleWithAction_5", "articleWithAction_9"]
+      if (exception.indexOf(type) > -1) {
         this[type].articleWithAction = something[0].data;
         this[type].icon1 = something[1].data;
         this[type].icon2 = something[2].data;
@@ -208,7 +208,7 @@ export default {
 
     .key-visual-container
       width: 100%
-      background: url('../assets/img/keyBg.jpg') center center no-repeat
+      // background: url('../assets/img/keyBg.jpg') center center no-repeat
       background-size: cover
       background-attachment: fixed
 
@@ -224,7 +224,7 @@ export default {
     .article-wtih-action-container
       width: 100%
       padding: 4rem 0
-      background: url('../assets/img/sectionBg-1.jpg') center center no-repeat
+      // background: url('../assets/img/sectionBg-1.jpg') center center no-repeat
       background-size: cover
       background-attachment: fixed
 

@@ -26,6 +26,9 @@
 </template>
 
 <script>
+// [HTML] .Tabs is deprecated
+// so, set .Tabs's width = 0 , overflow: hidden in css
+// and .content's width = 100%
 export default {
   name: "InformationWithTab",
   props: {
@@ -74,7 +77,8 @@ export default {
 <style lang="sass" scoped>
   #InformationWithTab
     .tabs
-      width: calc(34% - 25px)
+      width: 0
+      overflow: hidden
       margin: 0 25px
       .tab
         font-size: .9rem
@@ -109,13 +113,14 @@ export default {
                   border-color: transparent transparent transparent white
                   border-width: 10px
     .content
+      width: 100%
       &.grid
         grid-template-columns: 0.6fr 0.4fr
         &.hasAttachment
           grid-template-areas: "Title Attachment" "Score Score"
         &.noAttachment
           grid-template-areas: "Title Title" "Score Score"
-      width: calc(66% - 25px)
+      // width: calc(66% - 25px)
       margin: 0 25px
 
       .title-box

@@ -1,14 +1,15 @@
 {
-  "title": "SUSTAINABILITY GOALS",
-  "description": "Our team of experts in the areas of architecture, engineering, management and construction bring you the insight and advice you need for your project.",
+  "title": "Excess Reserves Mechanism",
+  "description": "Always Backed by Assets with Value Exceeding the Value of GOLD Issuance",
   "list": [
     {
-      "content": "Ecologic materials and oils",
+      "content": "USD 15 Million Upfront Cash as Capital",
       "active": false
     },
     {
-      "content": "Human charity for fourth world countries",
-      "active": false
+      "content": "Gold Deposits that Worth at Least USD 2 Billion to Regulate Gold Reserve. Download Report",
+      "active": false,
+      "link": "/doc/test.docx"
     },
     {
       "content": "Renovable products from the scratch",

@@ -10,11 +10,12 @@
           //- .amount {{ contract[header] }}
           h6.sub_title {{ contract[header] }}
     .key-action.flex
-      button.iframeBtn(@click="triggerVideo(true)") WATCH VIDEO
-      .triangle.playBtnAnimation(@click="triggerVideo(true)")
-      .iframe-container.flex(v-if="isVideoOpen")
-        .back-drop(@click="triggerVideo(false)")
-        iframe(:src="keyVisual.video")
+      a.iframeBtn(:href="keyVisual.whitepaper" target="_blank") {{ keyVisual.button_name }}
+      a.triangle.playBtnAnimation(:href="keyVisual.whitepaper" target="_blank")
+      //- .triangle.playBtnAnimation(@click="triggerVideo(true)")
+      //- .iframe-container.flex(v-if="isVideoOpen")
+      //-   .back-drop(@click="triggerVideo(false)")
+      //-   iframe(:src="keyVisual.video")
 
 </template>
 

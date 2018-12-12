@@ -1,11 +1,10 @@
 {
+  "background_image": "/img/section_1_keyVisual/background_image.jpeg",
   "title": [
-    "[ONE] THE BEST CONSTRUCTIONS COMPANY SINCE 1895",
-    "[TWO] OUR MISSION IS TO DEVELOP THE STRONGEST BUILDINGS",
-    "[THREE] WORLDWIDE LEADER OF CONSTRUCTION INDUSTRY",
-    "[FOUR] OUR MISSION IS TO DEVELOP THE STRONGEST BUILDINGS",
-    "[FIVE] WORLDWIDE LEADER OF CONSTRUCTION INDUSTRY"
+    "PortaGold, the gold that is portable."
   ],
   "description": "Each of us is carving a stone, erecting a column, or cutting a piece of stained glass in the construction of something much bigger than ourselves.",
+  "button_name": "Download Whitepaper",
+  "whitepaper": "/doc/test.docx",
   "video": "https://www.youtube.com/embed/nJlRzkDR9tU"
 }
