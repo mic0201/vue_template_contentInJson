@@ -85,7 +85,7 @@ export default {
         flex-wrap: nowrap
       width: 100%
       height: 300px
-      overflow: auto
+      overflow: hidden
       .member-slider
         transition: transform .7s
         &.flex

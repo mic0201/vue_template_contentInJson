@@ -3,11 +3,12 @@ var web3 = new Web3();
 import contarct from './contract.json'
 
 export async function connectContract() {
-  let act = await _connectMetamask(),
-    Instance = await _createContractInstance(),
+  web3.setProvider(new web3.providers.HttpProvider('https://ropsten.infura.io/v3/aa6f9d72029242c4a9618fadd865c090'))
+  let Instance = await _createContractInstance(),
     admin_wallet = contarct.admin_wallet
 
-  return { act, Instance, admin_wallet }
+  console.log(Instance)
+  return { Instance, admin_wallet }
 }
 
 function _connectMetamask() {
@@ -31,6 +32,6 @@ function _connectMetamask() {
 
 function _createContractInstance() {
   return new Promise(resolve => {
-    resolve(window.micaWeb3.eth.contract(contarct.abi).at(contarct.address))
+    resolve(web3.eth.contract(contarct.abi).at(contarct.address))
   })
 }

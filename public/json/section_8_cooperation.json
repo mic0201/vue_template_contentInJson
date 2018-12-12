@@ -1,28 +1,62 @@
 {
-  "logo": [
+  "row": [
     {
-      "image": "img/section_8_cooperation/logo-1.png",
-      "link": "https://www.google.com"
+      "title": "GOLD is tradable on these exchanges",
+      "logo": [
+        {
+          "image": "img/section_8_cooperation/logo-1.png",
+          "link": "https://www.google.com"
+        },
+        {
+          "image": "img/section_8_cooperation/logo-2.png",
+          "link": "www.google.com"
+        },
+        {
+          "image": "img/section_8_cooperation/logo-3.png",
+          "link": "www.google.com"
+        },
+        {
+          "image": "img/section_8_cooperation/logo-4.png",
+          "link": "www.google.com"
+        },
+        {
+          "image": "img/section_8_cooperation/logo-5.png",
+          "link": "www.google.com"
+        },
+        {
+          "image": "img/section_8_cooperation/logo-6.png",
+          "link": "www.google.com"
+        }
+      ]
     },
     {
-      "image": "img/section_8_cooperation/logo-2.png",
-      "link": "www.google.com"
-    },
-    {
-      "image": "img/section_8_cooperation/logo-3.png",
-      "link": "www.google.com"
-    },
-    {
-      "image": "img/section_8_cooperation/logo-4.png",
-      "link": "www.google.com"
-    },
-    {
-      "image": "img/section_8_cooperation/logo-5.png",
-      "link": "www.google.com"
-    },
-    {
-      "image": "img/section_8_cooperation/logo-6.png",
-      "link": "www.google.com"
+      "title": "GOLD can be exchanged to physical gold on these places",
+      "logo": [
+        {
+          "image": "img/section_8_cooperation/logo-1.png",
+          "link": "https://www.google.com"
+        },
+        {
+          "image": "img/section_8_cooperation/logo-2.png",
+          "link": "www.google.com"
+        },
+        {
+          "image": "img/section_8_cooperation/logo-3.png",
+          "link": "www.google.com"
+        },
+        {
+          "image": "img/section_8_cooperation/logo-4.png",
+          "link": "www.google.com"
+        },
+        {
+          "image": "img/section_8_cooperation/logo-5.png",
+          "link": "www.google.com"
+        },
+        {
+          "image": "img/section_8_cooperation/logo-6.png",
+          "link": "www.google.com"
+        }
+      ]
     }
   ]
 }

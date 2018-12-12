@@ -5,10 +5,10 @@
         h1(v-for="title in keyVisual.title") {{ title }}
       p {{ keyVisual.description }}
       .contract-info.box.flex
-        .value.flex(v-for="header in contract_header")
+        .value.flex(v-for="header in keyVisual.contract_state")
           h3.icon {{ header }}
           //- .amount {{ contract[header] }}
-          h6.sub_title {{ contract[header] }}
+          h6.sub_title {{ contract[header] || '-' }}
     .key-action.flex
       a.iframeBtn(:href="keyVisual.whitepaper" target="_blank") {{ keyVisual.button_name }}
       a.triangle.playBtnAnimation(:href="keyVisual.whitepaper" target="_blank")
@@ -30,24 +30,17 @@ export default {
     return {
       isVideoOpen: false,
       num: 0,
-      contract_header: ['cap', 'totalSupply', 'balance'],
-      contract: {
-        cap: '-',
-        totalSupply: '-',
-        balance: '-'
-      }
+      contract: {}
     };
   },
   watch: {
     contractInfo: {
       deep: true,
       handler: function (newVal, oldVal) {
-        console.log(newVal)
-        this.contract = {
-          balance: this.substrNum(newVal.balance.dividedBy(1e18).toString(10)),
-          cap: this.substrNum(newVal.cap.dividedBy(1e18).toString(10)),
-          totalSupply: this.substrNum(newVal.totalSupply.dividedBy(1e18).toString(10))
-        }
+        this.keyVisual.contract_state.forEach(
+          (d, i) => this.contract[d] = this.substrNum(newVal[this.keyVisual.contract_method_name[i]].dividedBy(1e18).toString(10))
+        )
+        this.$forceUpdate()
       }
     }
   },

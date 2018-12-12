@@ -1,8 +1,11 @@
 <template lang="pug">
-  #Cooperation.flex
-    .img-box(v-for="logo in cooperation.logo" )
-      a(:href="logo.link" target="_blank")
-        img(:src="logo.image")
+  .Cooperation
+    .row.flex(v-for="row in cooperation.row")
+      h2 {{ row.title }}
+      .img-container.flex
+        .img-box(v-for="logo in row.logo" )
+          a(:href="logo.link" target="_blank")
+            img(:src="logo.image")
 </template>
 
 <script>
@@ -15,9 +18,14 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-  #Cooperation
-    &.flex
-      flex-wrap: wrap
+  .Cooperation
+    .row
+      &:not(:first-child)
+        margin-top: 4rem
+      &.flex
+        flex-direction: column
+    h2
+      text-align: center
     .img-box
       width: calc(100% / 6 - 30px)
       margin: 0px 10px
