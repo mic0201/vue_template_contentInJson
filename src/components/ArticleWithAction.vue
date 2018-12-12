@@ -3,7 +3,7 @@
     .info
       h2.title {{ articleWithAction.title }}
       p.description {{ articleWithAction.description }}
-      .box.flex
+      .contract-info.box.flex
         .value.flex(v-for="val in articleWithAction.data")
           .icon
           .amount {{ val.value }}
@@ -73,28 +73,7 @@ export default {
         color: #f3b007
       .description
         color: white
-      .box
-        margin-top: 3.8rem
-        > div
-          width: calc(100% / 2)
 
-        .value
-          &.flex
-            justify-content: space-between
-            flex-direction: column
-
-          .icon
-            margin: auto 0
-
-          .amount, .sub_title
-            color: white
-
-          .amount
-            font-weight: 900
-            font-size: 1.4rem
-
-          .sub_title
-            font-weight: 400
 
     .action
       &.flex

@@ -3,9 +3,11 @@ var web3 = new Web3();
 import contarct from './contract.json'
 
 export async function connectContract() {
-  let act = await _connectMetamask()
-  let Instance = await _createContractInstance()
-  return { act, Instance }
+  let act = await _connectMetamask(),
+    Instance = await _createContractInstance(),
+    admin_wallet = contarct.admin_wallet
+
+  return { act, Instance, admin_wallet }
 }
 
 function _connectMetamask() {

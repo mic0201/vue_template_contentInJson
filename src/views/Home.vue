@@ -3,7 +3,7 @@
     .header-container
       Header.component(:header="header")
     .key-visual-container
-      KeyVisual.component(:keyVisual="keyVisual")
+      KeyVisual.component(:keyVisual="keyVisual" :contractInfo="contractInfo")
     .introduction-container
       Introduction.component(:introduction="introduction")
     .article-with-list-container
@@ -87,9 +87,15 @@ export default {
     Footer,
     CopyRight
   },
-  data: function() {
+  data: function () {
     return {
       contract: {},
+      contractInfo: {
+        symbol: '',
+        totalSupply: '',
+        cap: '',
+        balance: ''
+      },
       exception: ["articleWithAction_5", "articleWithAction_9"],
       header: {},
       keyVisual: {
@@ -165,22 +171,21 @@ export default {
       this[type] = something.data;
     },
     async readContract() {
-      let _read = (methods) => {
+      let _read = (methods, param) => {
         return new Promise(resolve => {
-          this.contract.Instance[methods]((e,r) => {
-            if(!e) {
+          this.contract.Instance[methods](param, (e, r) => {
+            if (!e) {
               resolve(r)
             }
           })
         })
       }
-      let totalSupply = await _read('totalSupply'),
-        symbol = await _read('symbol')
-      console.log('contract Info')
-      console.log('totalSupply', totalSupply)
-      console.log('symbol', symbol)
-      // totalSupply.toNumber() = 1e27
-      // micaWeb3.fromWei(totalSupply.toNumber()) = 1e9
+      this.contractInfo = {
+        totalSupply: await _read('totalSupply'),
+        symbol: await _read('symbol'),
+        cap: await _read('cap'),
+        balance: await _read('balanceOf', this.contract.admin_wallet)
+      }
     }
   },
 };
@@ -223,21 +228,11 @@ export default {
       background-size: cover
       background-attachment: fixed
 
-    .introduction-type-2-container
-      padding: 4rem 30px
-
-    .information-with-tab-container
-      padding: 4rem 30px
-
-    .cooperation-container
-      padding: 4rem 30px
-
-    .team-container
-      padding: 4rem 30px
-
-    .twitter-container
-      padding: 4rem 30px
-
+    .introduction-type-2-container,
+    .information-with-tab-container,
+    .cooperation-container,
+    .team-container,
+    .twitter-container,
     .footer-container
       padding: 4rem 30px
 

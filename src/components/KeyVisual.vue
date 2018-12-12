@@ -4,6 +4,11 @@
       .title-slider.flex
         h1(v-for="title in keyVisual.title") {{ title }}
       p {{ keyVisual.description }}
+      .contract-info.box.flex
+        .value.flex(v-for="header in contract_header")
+          .icon {{ header }}
+          //- .amount {{ contract[header] }}
+          h6.sub_title {{ contract[header] }}
     .key-action.flex
       button.iframeBtn(@click="triggerVideo(true)") WATCH VIDEO
       .triangle.playBtnAnimation(@click="triggerVideo(true)")
@@ -17,13 +22,32 @@
 export default {
   name: "KeyVisual",
   props: {
-    keyVisual: Object
+    keyVisual: Object,
+    contractInfo: Object
   },
-  data: function() {
+  data: function () {
     return {
       isVideoOpen: false,
-      num: 0
+      num: 0,
+      contract_header: ['cap', 'totalSupply', 'balance'],
+      contract: {
+        cap: '-',
+        totalSupply: '-',
+        balance: '-'
+      }
     };
+  },
+  watch: {
+    contractInfo: {
+      deep: true,
+      handler: function (newVal, oldVal) {
+        this.contract = {
+          balance: newVal.balance.toString(10),
+          cap: newVal.cap.toString(10),
+          totalSupply: newVal.totalSupply.toString(10)
+        }
+      }
+    }
   },
   created() {
     this.autoCarouselTitle()
