@@ -23,7 +23,7 @@ export function getArticleWithAction_9() {
 }
 
 function getIcon1() {
-  let url = `img/section_9_article-with-action/square.svg`
+  let url = `img/section_9_article-with-action/icon1.svg`
   return new Promise(resolve => {
     axios.get(url)
       .then(response => resolve(response))
@@ -32,7 +32,7 @@ function getIcon1() {
 }
 
 function getIcon2() {
-  let url = `img/section_9_article-with-action/users.svg`
+  let url = `img/section_9_article-with-action/icon2.svg`
   return new Promise(resolve => {
     axios.get(url)
       .then(response => resolve(response))
@@ -41,7 +41,7 @@ function getIcon2() {
 }
 
 function getBtnIcon() {
-  let url = `img/section_9_article-with-action/users.svg`
+  let url = `img/section_9_article-with-action/iconInButton.svg`
   return new Promise(resolve => {
     axios.get(url)
       .then(response => resolve(response))

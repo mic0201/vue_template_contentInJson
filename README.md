@@ -12,9 +12,9 @@
 8. **[SECTION_7](#section_7_informationWithTabjson)**
 9. **[SECTION_8](#section_8_cooperationjson)**
 10. **[SECTION_9](#section_9_article-with-actionjson)**
-10. **[SECTION_10](#section_10_teamjson)**
-10. **[SECTION_11](#section_11_twitter-walljson)**
-11. **[FOOTER](#footerjson)**
+11. **[SECTION_10](#section_10_teamjson)**
+12. **[SECTION_11](#section_11_twitter-walljson)**
+13. **[FOOTER](#footerjson)**
 
 
 ### header.json

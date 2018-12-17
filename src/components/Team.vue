@@ -4,7 +4,7 @@
     p.team-description.contentDescrFontColor {{ team.description }}
     .member-box.flex
       .member-slider.flex
-        .member.card(v-for="member in team.member")
+        .member.card(v-for="member in team.member" @mouseover="pauseInterval" @mouseleave="reStartInterval")
           .img
             img(:src="member.image")
           .content
@@ -24,15 +24,16 @@ export default {
   props: {
     team: Object
   },
-  data: function() {
+  data: function () {
     return {
-      team_slider_num: 0
+      team_slider_num: 0,
+      interval: 0
     };
   },
   watch: {
     team: {
       deep: true,
-      handler: function(newVal, oldVal) {
+      handler: function (newVal, oldVal) {
         if (newVal.member.length) {
           this.teamAnimation(newVal);
         }
@@ -42,20 +43,28 @@ export default {
   methods: {
     teamAnimation(team) {
       this._teamAnimation(team)
-      setInterval(() => {
+      this.interval = setInterval(() => {
         this._teamAnimation(team)
       }, 3000);
     },
     _teamAnimation(team) {
       let index = team.member.length - 1,
         num = 0
-      if (this.team_slider_num > index - 3 && this.team_slider_num < index ) {
+      if (this.team_slider_num > index - 3 && this.team_slider_num < index) {
         this.team_slider_num = index - 3;
-      }else if (this.team_slider_num > index) {
+      } else if (this.team_slider_num > index) {
         this.team_slider_num = 0
       }
       document.querySelector(".member-slider").style.transform = `translateX(calc(-100% / ${index + 1} * ${this.team_slider_num}))`;
-      this.team_slider_num+= 4;
+      this.team_slider_num += 4;
+    },
+    pauseInterval() {
+      clearInterval(this.interval)
+    },
+    reStartInterval() {
+      this.interval = setInterval(() => {
+        this._teamAnimation(this.team)
+      }, 3000);
     }
   }
 };
