@@ -15,7 +15,7 @@
 [SECTION_10](#header.json)
 
 
-###header.json
+### header.json
 ```
 範例
 {
@@ -63,7 +63,7 @@
 * button_text: String
   - 按鈕文案
 
-###section_1_key-visual.json
+### section_1_key-visual.json
 ```
 範例：
 {
@@ -100,7 +100,7 @@
 * video: Url (與 whitepaper 擇一)
   - 請放入 Youtube 嵌入語法中的 url, 有設定此屬性, 點擊按鈕, 會彈出視窗展示影片
 
-###section_2_introduction.json
+### section_2_introduction.json
 ```
 範例：
 {
@@ -160,7 +160,7 @@
   - sub_title: String
     - 小標題
 
-###section_*_article-with-list.json
+### section_*_article-with-list.json
 ```
 範例：
 {
@@ -207,7 +207,7 @@
   - link: Path
     - 檔案路徑, 有此屬性會開啟超連結
 
-###section_*_image-wall.json
+### section_*_image-wall.json
 ```
 範例：
 {
@@ -235,7 +235,7 @@
   - description: String
   - button_text: String
 
-###section_*_article-with-action.json
+### section_*_article-with-action.json
 ```
 範例：
 {
@@ -268,7 +268,7 @@
   - title: String
 * button_text: String
 
-###section_6_introduction.json
+### section_6_introduction.json
 ```
 範例：
 {
@@ -306,7 +306,7 @@
   - back_side: String
     - 滑鼠移過去後的文字顯示
 
-###section_7_informationWithTab.json
+### section_7_informationWithTab.json
 ```
 範例：
 {
