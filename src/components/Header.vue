@@ -169,7 +169,7 @@ export default {
           height: 100%
           transition: background-color .15s
 
-          &:not(.tab):not(.table)
+          &:not(.tab)
             position: relative
 
           &.flex
@@ -236,7 +236,7 @@ export default {
 
       .tableList
         position: absolute
-        max-width: 1200px
+        max-width: 550px
         width: 100vw
         top: 100%
         left: 0
