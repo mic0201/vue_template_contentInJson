@@ -1,7 +1,7 @@
 ## JSON Setting
 `path: /public/json/`
 
-## Link
+## Anchor
 1. **[HEADER](#headerjson)**
 2. **[SECTION_1](#section_1_key-visualjson)**
 3. **[SECTION_2](#section_2_introductionjson)**
