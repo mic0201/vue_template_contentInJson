@@ -107,23 +107,28 @@ export default {
     width: 100%
     height: 70px
     box-sizing: border-box
-    transition: all .3s
-    &.flex
-      align-items: center
-
-    &.alt
-      height: 55px
-      background-color: white
-      padding: 0 65px
-      &:before
+    transition: width .3s, height .3s
+    &:before
         content: ''
         position: fixed
         z-index: -1
         top: 0
         left: 0
         width: 100vw
-        height: 55px
+        height: 0px
+        overflow: hidden
+        opacity: 0
         background-color: white
+        transition: opacity .3s, height .3s
+    &.flex
+      align-items: center
+
+    &.alt
+      height: 55px
+      padding: 0 65px
+      &:before
+        height: 55px
+        opacity: 1
       .logo
         > h3
           font-size: .8rem
