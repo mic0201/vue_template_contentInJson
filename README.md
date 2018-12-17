@@ -2,14 +2,14 @@
 `path: /public/json/`
 
 ## Link
-[HEADER](#header)
-[SECTION_1](#section_1_key-visual.json)
-[SECTION_2](#section_2_introduction.json)
-[SECTION_3](#section_*_article-with-list.json)
-[SECTION_4](#section_*_article-with-list.json)
-[SECTION_5](#section_*_image-wall.json)
-[SECTION_6](#section_6_introduction.json)
-[SECTION_7](#section_7_informationWithTab.json)
+[HEADER](#headerjson)
+[SECTION_1](#section_1_key-visualjson)
+[SECTION_2](#section_2_introductionjson)
+[SECTION_3](#section_*_article-with-listjson)
+[SECTION_4](#section_*_article-with-listjson)
+[SECTION_5](#section_*_image-walljson)
+[SECTION_6](#section_6_introductionjson)
+[SECTION_7](#section_7_informationWithTabjson)
 [SECTION_8](#header.json)
 [SECTION_9](#header.json)
 [SECTION_10](#header.json)
