@@ -32,15 +32,17 @@ export default {
 
   #ArticleWithList
     width: 100%
-    li
-      position: relative
-      margin: 0.6rem 0
-    svg
-      position: absolute
-      top: 3.5px
-      left: -25px
-      width: 0.6rem
-      > path
-        fill: #f3b007
+    ul.list
+      min-height: 180px
+      li
+        position: relative
+        margin: 0.6rem 0
+      svg
+        position: absolute
+        top: 3.5px
+        left: -25px
+        width: 0.6rem
+        > path
+          fill: #f3b007
 
 </style>

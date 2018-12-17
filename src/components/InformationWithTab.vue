@@ -17,12 +17,13 @@
           iframe(:src="content.attachment.video")
 
       .score-box.flex
-        .bar-container(v-for="bar in content.score")
-          h5.item {{ bar.item }}
+        .bar-container(v-for="header in content.score_header")
+          h5.item {{ header }}
           .bar-backing
-            .bar(:style="{ width: bar.value * 100 + '%' }")
+            .bar(:style="{ width: content.score[header] + '%' }")
               .tip
-                span {{ bar.value * 100 + '%' }}
+                span(v-if="header === 'GOLD Price'") {{ content.score[header] }}
+                span(v-else) {{ content.score[header] + '%' }}
 </template>
 
 <script>
@@ -32,9 +33,10 @@
 export default {
   name: "InformationWithTab",
   props: {
-    informationWithTab: Object
+    informationWithTab: Object,
+    contractInfo: Object
   },
-  data: function() {
+  data: function () {
     return {
       focusWho: "",
       content: {
@@ -45,6 +47,18 @@ export default {
       },
       isVideoOpen: false
     };
+  },
+  watch: {
+    contractInfo: {
+      deep: true,
+      handler: function (newVal, oldVal) {
+        let balance = this.informationWithTab.tab["BUILDINGS"].score["GOLD Issued"] = this.substrNum(newVal["balance"].dividedBy(newVal["totalSupply"]).mul(100).toString(10))
+        let price = this.informationWithTab.tab["BUILDINGS"].score["GOLD Price"] = this.substrNum(0)
+        let distributed = this.informationWithTab.tab["BUILDINGS"].score["GOLD Distributed"] = this.substrNum(newVal["totalSupply"].minus(newVal["balance"]).dividedBy(newVal["totalSupply"]).mul(100).toString(10))
+        let cap = this.informationWithTab.tab["BUILDINGS"].score["Market Cap"] = this.substrNum(window.micaWeb3.toBigNumber(price).mul(window.micaWeb3.toBigNumber(distributed)).toString(10))
+        this.$forceUpdate()
+      }
+    }
   },
   beforeUpdate() {
     this.autoFocus();
@@ -69,6 +83,13 @@ export default {
     },
     triggerVideo(open) {
       this.isVideoOpen = open;
+    },
+    substrNum(str) {
+      if (typeof str === 'number' || str.indexOf('.') < 0) {
+        return str
+      }
+      let afterDecimalPoint = str.split('.')[1]
+      return str = str.replace(afterDecimalPoint, afterDecimalPoint.substr(0, 2))
     }
   }
 };
@@ -164,6 +185,7 @@ export default {
                 width: 40%
                 height: 3px
                 background-color: #f3b007
+                transition: width 1s
                 .tip
                   position: absolute
                   top: 8px

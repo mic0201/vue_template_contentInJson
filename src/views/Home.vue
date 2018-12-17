@@ -20,7 +20,7 @@
     .introduction-type-2-container
       IntroductionType2.component(:introduction_6="introduction_6")
     .information-with-tab-container
-      InformationWithTab.component(:informationWithTab="informationWithTab")
+      InformationWithTab.component(:informationWithTab="informationWithTab" :contractInfo="contractInfo")
     .cooperation-container
       Cooperation.component(:cooperation="cooperation")
     .article-wtih-action-container(:style="{ backgroundImage: 'url('+ articleWithAction_9.articleWithAction.background_image +')' }")

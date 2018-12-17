@@ -25,12 +25,13 @@ export default {
       &.flex
         flex-direction: column
     h2
+      color: darkgrey
       text-align: center
     .img-box
       width: calc(100% / 6 - 30px)
       margin: 0px 10px
       a
-        opacity: 0.85
+        opacity: 0.75
         transition: opacity .3s
         &:hover
           opacity: 1

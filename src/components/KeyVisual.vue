@@ -4,11 +4,6 @@
       .title-slider.flex
         h1(v-for="title in keyVisual.title") {{ title }}
       p {{ keyVisual.description }}
-      .contract-info.box.flex
-        .value.flex(v-for="header in keyVisual.contract_state")
-          h3.icon {{ header }}
-          //- .amount {{ contract[header] }}
-          h6.sub_title {{ contract[header] || '-' }}
     .key-action.flex
       a.iframeBtn(:href="keyVisual.whitepaper" target="_blank") {{ keyVisual.button_name }}
       a.triangle.playBtnAnimation(:href="keyVisual.whitepaper" target="_blank")
@@ -32,17 +27,6 @@ export default {
       num: 0,
       contract: {}
     };
-  },
-  watch: {
-    contractInfo: {
-      deep: true,
-      handler: function (newVal, oldVal) {
-        this.keyVisual.contract_state.forEach(
-          (d, i) => this.contract[d] = this.substrNum(newVal[this.keyVisual.contract_method_name[i]].dividedBy(1e18).toString(10))
-        )
-        this.$forceUpdate()
-      }
-    }
   },
   created() {
     this.autoCarouselTitle()

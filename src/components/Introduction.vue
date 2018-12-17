@@ -12,8 +12,7 @@
         .icon
           img(:src="leading.icon")
         .info.contentDescrFontColor
-          h4 {{ leading.title }}
-          h6.sub {{ leading.sub_title }}
+          h4.sub {{ leading.sub_title }}
 
 </template>
 
@@ -89,9 +88,9 @@ export default {
 
       .leading
         width: calc(100% / 4)
+        margin-top: 15px
         &.flex
           align-items: center
-          justify-content: center
 
         .icon
           width: 35px
@@ -100,7 +99,5 @@ export default {
         .info
           border-left: 1px solid rgba(0, 0, 0, 0.2)
           padding: 0px 15px
-          .sub
-            font-weight: 400
 
 </style>

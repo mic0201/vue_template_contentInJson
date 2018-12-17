@@ -7,7 +7,7 @@
     //- Menu
     .menu.flex
       span.item-container(v-for="(item, index) in header.menu" :key="index")
-        a.item.flex(:href="item.link" :class="item.isTab ? 'tab' : ''") {{ item.name }}
+        a.item.flex(:href="item.link" :class="{ 'tab': item.isTab, 'table': item.isTable}") {{ item.name }}
           //- Layer 1
           .itemList.disappear.flex(v-if="item.isList")
             a.subItem(v-for="(subItem, subIndex) in item.item" :key="subIndex" :href="subItem.link") {{ subItem.name }}
@@ -16,6 +16,18 @@
               //- Layer 2
               .subItemList.disappear.flex(v-if="subItem.isList")
                 a.subItem_item(v-for="(subItem_item, subItem_itemIndex) in subItem.item" :key="subItem_itemIndex" :href="subItem_item.link") {{ subItem_item.name }}
+          //- Table
+          .tableList.disappear.flex(v-if="item.isTable")
+            table
+              thead
+                tr
+                  th(v-for="header in item.tableHeader")
+                    h4 {{ header }}
+              tbody
+                tr(v-for="body in item.tableBody")
+                  td {{ body.column1 }}
+                  td {{ body.column2 }}
+            .tableTip {{ item.tableTip }}
           //- Tab
           .tabList.disappear.flex(v-if="item.isTab")
             label.tab-container(v-for="(tabHeader, tabHeaderIndex) in item.tabHeader" :key="tabHeaderIndex" @click="openTabBody(tabHeaderIndex)")
@@ -100,11 +112,18 @@ export default {
       align-items: center
 
     &.alt
-      width: 100%
       height: 55px
-      max-width: 100vw
       background-color: white
       padding: 0 65px
+      &:before
+        content: ''
+        position: fixed
+        z-index: -1
+        top: 0
+        left: 0
+        width: 100vw
+        height: 55px
+        background-color: white
       .logo
         > h3
           font-size: .8rem
@@ -145,7 +164,7 @@ export default {
           height: 100%
           transition: background-color .15s
 
-          &:not(.tab)
+          &:not(.tab):not(.table)
             position: relative
 
           &.flex
@@ -163,9 +182,7 @@ export default {
 
           &:hover
             background-color: $headerHoverColor
-            > .itemList
-              +showList(100%, 0)
-            > .tabList
+            > .itemList, > .tabList, > .tableList
               +showList(100%, 0)
 
           > .itemList
@@ -211,6 +228,29 @@ export default {
                 > .subItem_item
                   &:hover
                     +whenHoverItem
+
+      .tableList
+        position: absolute
+        max-width: 1200px
+        width: 100vw
+        top: 100%
+        left: 0
+        &.disappear
+          +disappear
+        &:hover
+          tbody, tr, td, .tableTip
+            background-color: $headerHoverColor
+
+        thead
+          th
+            border-bottom: 1px solid $headerHoverColor
+
+        tr
+          &:hover
+            td
+              background-color: white
+        td, .tableTip
+          padding: 10px 15px
 
       .tabList
         max-width: 1200px

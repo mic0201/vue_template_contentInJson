@@ -1,90 +1,18 @@
 {
   "tab_header": [
-    "BUILDINGS",
-    "INTERIORS",
-    "HOMES",
-    "OTHER PRODUCTS"
+    "BUILDINGS"
   ],
   "tab": {
     "BUILDINGS": {
       "title": "GOLD Digital Certificate",
       "description": "The PortaGold project’s GOLD digital certificate is created using smart contract protocol on the Ethereum blockchain",
-      "score": [
-        {
-          "item": "GOLD Issued",
-          "value": 0.8
-        },
-        {
-          "item": "GOLD Price",
-          "value": 0.2
-        },
-        {
-          "item": "GOLD Distributed",
-          "value": 0.1
-        },
-        {
-          "item": "Market Cap",
-          "value": 0.67
-        }
-      ],
-      "attachment": {}
-    },
-    "INTERIORS": {
-      "title": "OUR GROWING NUMBERS",
-      "description": "Lorem ipsum dolor sit amet commodo cons.",
-      "score": [
-        {
-          "item": "GREEN MATERIAL",
-          "value": 0.8
-        },
-        {
-          "item": "RENOVABLE",
-          "value": 0.8
-        }
-      ],
-      "attachment": {
-        "image": "/img/section_7_information-with-tab/image-1.jpg"
-      }
-    },
-    "HOMES": {
-      "title": "HOMES",
-      "description": "Lorem ipsum dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt utlabore et dolore magna aliqua. Utenim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.",
-      "score": [
-        {
-          "item": "GREEN MATERIAL",
-          "value": 0.8
-        },
-        {
-          "item": "BUILDINGS",
-          "value": 0.5
-        },
-        {
-          "item": "RENOVABLE",
-          "value": 0.6
-        },
-        {
-          "item": "HOMES",
-          "value": 0.75
-        }
-      ],
-      "attachment": {
-        "image": "/img/section_7_information-with-tab/image-1.jpg",
-        "video": "https://www.youtube.com/embed/nJlRzkDR9tU"
-      }
-    },
-    "OTHER PRODUCTS": {
-      "title": "OTHER PRODUCTS",
-      "description": "Lorem ipsum dolor sit amet commodo cons.",
-      "score": [
-        {
-          "item": "GREEN MATERIAL",
-          "value": 0.8
-        },
-        {
-          "item": "RENOVABLE",
-          "value": 0.8
-        }
-      ],
+      "score_header": ["GOLD Issued", "GOLD Price", "GOLD Distributed", "Market Cap"],
+      "score": {
+        "GOLD Issued": 20,
+        "GOLD Price": 20,
+        "GOLD Distributed": 30,
+        "Market Cap": 50
+      },
       "attachment": {}
     }
   }

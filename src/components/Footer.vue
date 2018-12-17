@@ -14,10 +14,10 @@
         input(placeholder="Search")
         .input-btn.flex
           span GO
-      .tree-container.flex
-        .tree.flex(v-for="tree in footer.mid.tree")
-          h4.node-title.contentTitleFontColor {{ tree.title }}
-          a.node.contentDescrFontColor(v-for="node in tree.node" :href="node.link" target="_blank") {{ node.name }}
+      //- .tree-container.flex
+      //-   .tree.flex(v-for="tree in footer.mid.tree")
+      //-     h4.node-title.contentTitleFontColor {{ tree.title }}
+      //-     a.node.contentDescrFontColor(v-for="node in tree.node" :href="node.link" target="_blank") {{ node.name }}
 
     .right
       .window

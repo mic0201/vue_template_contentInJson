@@ -120,7 +120,30 @@
     },
     {
       "name": "Fee Schedule",
-      "link": "https://google.com"
+      "isTable": true,
+      "tableHeader": [
+        "Fee Schedule (subject < USD 299,999",
+        "PortaGold"
+      ],
+      "tableBody": [
+        {
+          "column1": "1. Funding to buy GOLD token.",
+          "column2": "Max(0.2%, USD 50)"
+        },
+        {
+          "column1": "2. Redeem GOLD token to vault certificate.",
+          "column2": "0.25%"
+        },
+        {
+          "column1": "3.1 Sell vault certificate to USD with sell/buy contract.",
+          "column2": "0.25%"
+        },
+        {
+          "column1": "3.2 Exchange vault certificate to physical gold in Singapore.",
+          "column2": "0.25%"
+        }
+      ],
+      "tableTip": "If your order is over USD 300,000, please contact us via info@portagold.com."
     },
     {
       "name": "FAQ",
